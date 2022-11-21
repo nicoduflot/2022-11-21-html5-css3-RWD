@@ -1,0 +1,124 @@
+@import url('./wonderland2.css');
+/*
+tous les imports de css dans un autre CSS sont a déclarer ABSOLUMENT en début de fichier
+*/
+/*
+dimension les plus vues en web :
+px      =>  Pixel
+em      =>  cadratin : unité de mesure en print sur les presses
+            le cadratin se calcul par rapport à son parent
+rem     =>  cadratin racine : se calcul par rapport à la taille racine de police
+%       =>  pourcentage, se calcule par rapport à l'élément qui le contient
+vw & vh =>  viewport width & viewport height : correspond à la taille 
+            d'affichage de la page en largeur et en hauteur
+            si affichage en largeur 768px alors 20vw = 153.6 px
+
+si 2em = 32 px, 1em = 16px
+
+*/
+
+/* on peut surcharger la "racine" des déclarations CSS */
+
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    /* variables en CSS */
+    --heading-font: 'wonderland2';
+    --page-header-bg: #f2ebdc;
+    --page-nav-princ-bg: #f2ebdc;
+    --h1-font-color: #F22233;
+    --rouge-gras-font-color: #F22233;
+    --element-gutter-size: 0.5rem;
+    --column-1-1: calc( 100% - calc( 2 * var(--element-gutter-size) ) );
+    --column-1-2: calc( 50% - calc( 2 * var(--element-gutter-size) ) );
+    /* --column-1-3 reçoit 33% de l'espace dispo moins deux fois la largeur des goutières */
+    --column-1-3: calc( 33% - calc( 2 * var(--element-gutter-size) ) );
+    --column-1-4: calc( 25% - calc( 2 * var(--element-gutter-size) ) );
+    --column-2-3: calc( 66% - calc( 2 * var(--element-gutter-size) ) );
+    --column-3-4: calc( 75% - calc( 2 * var(--element-gutter-size) ) );
+}
+
+/* classes déclarée pour le document */
+
+*, 
+*::before, 
+*::after{
+    box-sizing: border-box;
+}
+
+.test-content-box div{
+    box-sizing: content-box;
+}
+
+.moitie{
+    width: 50%;
+    height: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    display: inline-block;
+}
+
+.deuxEm{
+    font-size: 2em;
+    border: 1px solid black;
+}
+
+.deuxRem{
+    font-size: 2rem;
+    border: 1px solid black;
+}
+
+.rouge-gras{
+    color: var(--rouge-gras-font-color);
+    font-weight: bold;
+}
+/* déclaration générale sur des éléments */
+
+h1{
+    margin: 0;
+    line-height: 2.5rem;
+    
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--h1-font-color);
+    font-family: var(--heading-font);
+    letter-spacing: 2px;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* déclaration en suivant la structure, du général au particulier */
+
+body{
+    margin: 0;
+}
+
+/* j'impacte en CSS les éléments header qui sont descendant direct de l'élément body */
+
+body > header{
+    background-color: var(--page-header-bg);
+}
+
+body > nav{
+    background-color: var(--page-nav-princ-bg);
+}
+
+body > nav ul{
+    margin: 0;
+}
+
+body > main{
+    width: 100%;
+}
+
+
+body > main > section > article,
+body > main > section > aside{
+    width: var(--column-1-1);
+    margin-left: auto;
+    margin-right: auto;
+}

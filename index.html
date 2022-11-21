@@ -10,7 +10,7 @@
         C'est ici que l'on ajoute aussi le lien vers les fichiers CSS, et les connexion vers les fichiers de script (Javascript...)
     -->
     <link rel="stylesheet" href="./css/bootstrap-icons.css" />
-
+    <link rel="stylesheet" href="./css/style.css" media="screen" />
 </head>
 
 <body id="top">
@@ -47,7 +47,7 @@
         </section>
         <section class="liste-article">
             <div class="titre">
-                Nos derniers article
+                Nos derniers articles
             </div>
             <article>
                 <header>
@@ -159,6 +159,16 @@ Enim accusamus amet libero non,
                             Bootstrap Icons
                         </a>
                     </li>
+                    <li>
+                        <a href="https://www.dafont.com/fr/" title="site de polices de caractère">
+                            Dafont.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://everythingfonts.com/font-face" title="Outils de création de font-face CSS">
+                            Font-face generator
+                        </a>
+                    </li>
                 </ul>
             </aside>
         </section>
@@ -191,6 +201,56 @@ Enim accusamus amet libero non,
                             Transformation gundam avion vers robot
                         </figcaption>
                     </figure>
+                </main>
+                <footer>
+                    <a href="./article.html" title="Lien vers l'article'">
+                        <button>
+                            <i class="bi bi-plus"></i> Lire la suite <i class="bi bi-plus"></i>
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2>Les problèmes courants en CSS</h2>
+                </header>
+                <main>
+                    <p>
+                        Les tailles des éléments sont par défaut calculés sur le contenu des éléments. 
+                        si un paragraphe possède une bordure de 1px, une marge intérieur (padding) 
+                        de 5px et un largeur de 200px, la "boîte" affichée fera de l'extérieur des bordures 
+                        212 px de large.
+                    </p>
+                    <p>
+                        La définition par défaut du calcul "box-sizing" est "content-box", si on veut la taille calculée
+                        depuis les bordures, on doit la forcer à "border-box"
+                    </p>
+                    <div class="test-content-box">
+                        <div class="moitie"></div><div class="moitie"></div>
+                    </div>
+                    <div class="test-border-box">
+                        <div class="moitie"></div><div class="moitie"></div>
+                    </div>
+                    <p>
+                        Les tailles calculées : si vous voulez utiliser
+                        des cadratin (em), il est
+                        plus sûr d'utiliser les cadratins racine (rem)
+                        car il sont toujouts calculés
+                        par rapport au cadratin racine du user-agent (le style CSS du navigateur)
+                        et non pas le cadratin calculé du conteneur
+                    </p>
+                    <div class="deuxEm">
+                        deux em
+                        <div class="deuxEm">
+                            deux em
+                        </div>
+                    </div>
+                    <div class="deuxRem">
+                        deux rem
+                        <div class="deuxRem">
+                            deux rem
+                        </div>
+                    </div>
                 </main>
                 <footer>
                     <a href="./article.html" title="Lien vers l'article'">
