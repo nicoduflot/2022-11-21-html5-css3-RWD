@@ -8,7 +8,7 @@
     <!-- 
         C'est ici que l'on ajoute aussi le lien vers les fichiers CSS, et les connexion vers les fichiers de script (Javascript...)
     -->
-
+    <link rel="stylesheet" href="./css/bootstrap-icons.css" />
 </head>
 <body id="top">
     <header>
@@ -42,11 +42,70 @@
 
             </div>
         </section>
-        <section id="liste-article">
-
+        <section class="liste-article">
+            <div class="titre">
+                Nos derniers article
+            </div>
+            <article>
+                <header>
+                    <h2>HMLT - CSS sur du texte</h2>
+                </header>
+                <main>
+                    <p>
+                        Il existe quelques balises pour changer l'apparence du texte. 
+                        En <b>gras</b> (b ou bold) qui n'a pas d'incidence en SEO ou en <strong>gras</strong> (strong) 
+                        qui a un impact direct sur le SEO.
+                    </p>
+                    <p>
+                        Il en est de même pour l'italique : <i>Italique à l'affichage</i>, 
+                        <em>Italique afficher avec une emphase sémantique</em>
+                    </p>
+                    <p>
+                        La balise font <font color="#f00" size="6" face="Arial">texte</font> n'est plus utilisée. 
+                        maintenant on utilise les balises de type inline comme le span <span class="rouge-gras">span associé à une classe</span>
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse deleniti ratione minima! Quae vel vitae reprehenderit iure, sapiente voluptatum architecto qui deserunt aut ad sunt? Expedita molestiae rerum voluptatum error. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, maxime. Expedita modi temporibus quasi itaque atque at repellat hic iste dolorum. Modi dolores, libero neque aspernatur dolore beatae non ex! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia laborum cumque eaque dolore odio doloribus recusandae vel? Impedit quaerat, quia corrupti ab incidunt hic commodi debitis placeat, repellat, error harum.
+                    </p>
+                    <pre>
+Lorem ipsum dolor sit amet 
+consectetur adipisicing elit. 
+Enim accusamus amet libero non, 
+eligendi et nisi architecto animi 
+perferendis distinctio unde 
+sunt minus, ab, eaque tempora 
+culpa sit rem? Vitae. 
+                    </pre>
+                    <p>
+                        <code>
+                            Lorem ipsum dolor sit amet 
+                            consectetur        adipisicing elit. Voluptatum ex asperiores ratione voluptas pariatur fuga quis voluptate aliquid cupiditate repellendus qui, ipsa vitae possimus iure vero impedit laborum unde corporis.
+                        </code>
+                    </p>
+                    <p>
+                        <code>
+                            &lt;p&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;coucou<br />
+                            &lt;/p&gt;
+                        </code>
+                    </p>
+                    <p>
+                        H<sub>2</sub>SO<sub>4</sub><sup>2-</sup>
+                    </p>
+                </main>
+                <footer>
+                    <a href="./article.html" title="Lien vers l'article'" >
+                        <button>
+                            <i class="bi bi-plus"></i> Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
         </section>
-        <section id="liste-article">
-
+        <section class="liste-article">
+            <div class="titre">
+                Nos article les plus lus
+            </div>
         </section>
     </main>
     <footer>
