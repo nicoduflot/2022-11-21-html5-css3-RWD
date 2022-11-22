@@ -74,11 +74,13 @@ si 2em = 32 px, 1em = 16px
 .deuxEm{
     font-size: 2em;
     border: 1px solid black;
+    padding: 20px;
 }
 
 .deuxRem{
     font-size: 2rem;
     border: 1px solid black;
+    padding: 20px;
 }
 
 .rouge-gras{
@@ -190,6 +192,7 @@ body > nav ul a:hover,
 body > nav ul a:focus
 {
     background-color: var(--nav-link-hover-bg-color);
+    color: var(--page-nav-princ-bg);
 }
 
 body > nav > ul,
@@ -213,6 +216,7 @@ body > main > section > aside{
 
 body > main > section > article footer{
     text-align: center;
+    margin-top: 10px;
 }
 
 article footer button{
@@ -251,7 +255,7 @@ body > footer > div > div > ul{
 }
 
 /* on sélectionne tout les li de la liste sauf celui qui en est le dernier enfant */
-body > footer > div > div > ul > li:not(body > footer > div > ul > li:last-child){
+body > footer > div > div > ul > li:not(body > footer > div > div > ul > li:last-child){
     border-bottom-width: 1px;
     border-bottom-color: var(--footer-li-link);
     border-bottom-style: dashed;
@@ -290,7 +294,24 @@ body > footer > div > div > ul > li a{
         width: var(--column-1-1);
     }
 
+    body > nav > ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
+    body > nav > ul > li{
+        border-right: 1px dashed var(--footer-li-link);
+    }
+    
+    body > nav > ul > li:first-child{
+        border-left: 1px dashed var(--footer-li-link);
+    }
+    
+    body > nav > ul > li a{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -320,10 +341,6 @@ body > footer > div > div > ul > li a{
         width: var(--column-1-1);
     }
 
-    /* 
-    comportement d'un bloc avec la classe column-rwd dans body > main > section 
-    quand c'est le deuxième & le dernier bloc de la ligne avec un affichage de 3 blocs par ligne
-    */
     body > main > section.liste-article .column-rwd:last-child:nth-of-type(3n+2){
         width: var(--column-2-3);
     }
@@ -359,5 +376,4 @@ body > footer > div > div > ul > li a{
     body > main > section.liste-article .column-rwd:last-child:nth-of-type(4n + 3){
         width: var(--column-1-2);
     }
-
 }

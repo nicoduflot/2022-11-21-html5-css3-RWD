@@ -1,0 +1,48 @@
+:root {
+  --element-gutter-size: 0.5cm;
+  --column-1-1: calc(100% - calc(2 * var(--element-gutter-size)));
+  --column-1-2: calc(50% - calc(2 * var(--element-gutter-size)));
+  /* --column-1-3 reçoit 33% de l'espace dispo moins deux fois la largeur des goutières */
+  --column-1-3: calc(33% - calc(2 * var(--element-gutter-size)));
+  --column-1-4: calc(25% - calc(2 * var(--element-gutter-size)));
+  --column-2-3: calc(66% - calc(2 * var(--element-gutter-size)));
+  --column-3-4: calc(75% - calc(2 * var(--element-gutter-size)));
+}
+
+@page {
+  margin: 2cm;
+}
+
+.titre-section {
+  width: 100%;
+}
+
+body > nav,
+#carrousel,
+body > footer,
+article footer {
+  display: none;
+}
+
+img {
+  max-width: 80%;
+}
+
+p {
+  orphans: 3;
+  widows: 3;
+}
+
+body > main > section.liste-article .column-rwd {
+  margin-top: var(--element-gutter-size);
+  margin-bottom: var(--element-gutter-size);
+  padding: 0.5cm;
+  break-inside: avoid;
+}
+
+body > main > section.liste-article .column-rwd main {
+  column-width: 17em;
+  column-gap: 3em;
+  column-count: 2;
+  column-rule: thin solid black;
+}
