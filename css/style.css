@@ -26,12 +26,17 @@ si 2em = 32 px, 1em = 16px
     color: #0B0D09;
     /* variables en CSS */
     --heading-font: 'wonderland2';
+    --heading-text-shadow-color: #0b0d09;
     --page-header-bg: #f2ebdc;
     --page-nav-princ-bg: #f2ebdc;
-    --h1-font-color: #F22233;
+    --h1-font-color: #f2ebdc;
+    --general-heading-font-color: #F22233;
     --rouge-gras-font-color: #F22233;
     --nav-link-color: #F22233;
-    --nav-link-hover-bg-color: #0b0d09;
+    --nav-link-color-hover: #40382A;
+    --general-link-color: #F22233;
+    --footer-li-link: #F22233;
+    --nav-link-hover-bg-color: #736451;
     --element-gutter-size: 0.5rem;
     --column-1-1: calc( 100% - calc( 2 * var(--element-gutter-size) ) );
     --column-1-2: calc( 50% - calc( 2 * var(--element-gutter-size) ) );
@@ -105,17 +110,35 @@ si 2em = 32 px, 1em = 16px
 h1{
     margin: 0;
     line-height: 2.5rem;
-    
+    text-align: center;
+    color: var(--h1-font-color);
 }
 
 h1, h2, h3, h4, h5, h6{
-    color: var(--h1-font-color);
+    color: var(--general-heading-font-color);
     font-family: var(--heading-font);
     letter-spacing: 2px;
 }
 
 img{
     max-width: 100%;
+}
+
+a, a:visited{
+    color: var(--general-link-color);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus{
+    color: var(--nav-link-color-hover);
+    text-decoration: none;
+}
+
+button{
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 /* déclaration en suivant la structure, du général au particulier */
@@ -128,6 +151,15 @@ body{
 
 body > header{
     background-color: var(--page-header-bg);
+    height: 20vh;
+    background: url('../images/alice-cards-design.jpg');
+    background-size:cover;
+    background-position: center center;
+    text-shadow: 0 0 5px var(--heading-text-shadow-color);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 body > nav{
@@ -166,4 +198,33 @@ body > main > section > aside{
     width: var(--column-1-1);
     margin-left: auto;
     margin-right: auto;
+}
+
+body > footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+body > footer > div{
+    margin-left: var(--element-gutter-size);
+    margin-right: var(--element-gutter-size);
+    width: var(--column-1-2);
+}
+
+body > footer > div > ul{
+    list-style-type: none;
+    line-height: 1.5rem;
+    padding: 0;
+}
+
+/* on sélectionne tout les li de la liste sauf celui qui en est le dernier enfant */
+body > footer > div > ul > li:not(body > footer > div > ul > li:last-child){
+    border-bottom-width: 1px;
+    border-bottom-color: var(--footer-li-link);
+    border-bottom-style: dashed;
+}
+
+body > footer > div > ul > li a{
+    display: block;
 }
