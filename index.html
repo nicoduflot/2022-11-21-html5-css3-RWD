@@ -10,7 +10,39 @@
         C'est ici que l'on ajoute aussi le lien vers les fichiers CSS, et les connexion vers les fichiers de script (Javascript...)
     -->
     <link rel="stylesheet" href="./css/bootstrap-icons.css" />
+    <script src="./js/swiper-bundle.js"></script>
+    <link rel="stylesheet" href="./css/swiper-bundle.css" media="screen" />
     <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <script>
+        /* 
+        pour être sûr d'utiliser JS quand tous les éléments de la page sont chargés 
+        il faut écouter l'évènement du navigateur qui indique que la page est chargé, quand il arrive,
+        on déclenche le comportement, ici c'est pour initialiser le swiper (carrousel)
+        */
+        window.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: true,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });
+        });
+    </script>
 </head>
 
 <body id="top">
@@ -41,12 +73,70 @@
     </nav>
     <main>
         <section id="carrousel">
+            <div class="titre-section">
+                À la une
+            </div>
             <div class="carrousel">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper center-swipper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <figure>
+                                <a href="./images/doc-signal.png" target="_blank">
+                                    <img src="./images/doc-signal.png" />
+                                </a>
+                                <figcaption>
+                                    Un commentaire sur l'image
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <a href="./images/doc-signal.png" target="_blank">
+                                    <img src="./images/dolf-signal.png" />
+                                </a>
+                                <figcaption>
+                                    Un commentaire sur l'image
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <a href="./images/doc-signal.png" target="_blank">
+                                    <img src="./images/drive-signal.png" />
+                                </a>
+                                <figcaption>
+                                    Un commentaire sur l'image
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <a href="./images/doc-signal.png" target="_blank">
+                                    <img src="./images/james-white-composite.jpg" />
+                                </a>
+                                <figcaption>
+                                    Un commentaire sur l'image
+                                </figcaption>                                
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
 
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
             </div>
         </section>
         <section class="liste-article">
-            <div class="titre">
+            <div class="titre-section">
                 Nos derniers articles
             </div>
             <article>
@@ -88,7 +178,7 @@
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse deleniti ratione minima! Quae vel
                         vitae reprehenderit iure, sapiente voluptatum architecto qui deserunt aut ad sunt? Expedita
-                        molestiae rerum voluptatum error. 
+                        molestiae rerum voluptatum error.
                     </p>
                     <pre>
 Lorem ipsum dolor sit amet 
@@ -123,18 +213,20 @@ Enim accusamus amet libero non,
                 </header>
                 <main>
                     <blockquote>
-                        <q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa veritatis voluptate vero ad sunt nostrum eaque consequatur enim soluta, vel harum, tempora aliquid quibusdam, natus sint accusantium atque cumque? Voluptates.</q>
+                        <q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa veritatis voluptate vero ad
+                            sunt nostrum eaque consequatur enim soluta, vel harum, tempora aliquid quibusdam, natus sint
+                            accusantium atque cumque? Voluptates.</q>
                         <br />
                         <cite>Jule César</cite>
                     </blockquote>
                     <h3>Différencier les feuilles de style</h3>
                     <p>
-                        Il est possible d'associer plusieurs feuilles de style à une page html, 
+                        Il est possible d'associer plusieurs feuilles de style à une page html,
                         et de différencier les "media" (screen, print) qui les utiliseront.
                     </p>
                     <p>
                         Si une page utilise 90% du CSS de base mais nécessite 10% de changement,
-                        comme l'affichage d'un article unique, il est souvent créé un feuillet CSS 
+                        comme l'affichage d'un article unique, il est souvent créé un feuillet CSS
                         qui surchargera les styles uniquement sur ce type de page
                     </p>
                 </main>
@@ -173,7 +265,7 @@ Enim accusamus amet libero non,
             </aside>
         </section>
         <section class="liste-article">
-            <div class="titre">
+            <div class="titre-section">
                 Nos articles les plus lus
             </div>
             <article>
@@ -185,7 +277,8 @@ Enim accusamus amet libero non,
                         Par défaut, on ajoute une image sur la page à l'aide de la balise img
                     </p>
                     <p>
-                        Avec HTML5, il existe une balise faîte pour encadrer les images, avec l'option d'y ajouter une légende
+                        Avec HTML5, il existe une balise faîte pour encadrer les images, avec l'option d'y ajouter une
+                        légende
                     </p>
                     <h3>balise img</h3>
                     <div class="affiche-image">
@@ -216,9 +309,9 @@ Enim accusamus amet libero non,
                 </header>
                 <main>
                     <p>
-                        Les tailles des éléments sont par défaut calculés sur le contenu des éléments. 
-                        si un paragraphe possède une bordure de 1px, une marge intérieur (padding) 
-                        de 5px et un largeur de 200px, la "boîte" affichée fera de l'extérieur des bordures 
+                        Les tailles des éléments sont par défaut calculés sur le contenu des éléments.
+                        si un paragraphe possède une bordure de 1px, une marge intérieur (padding)
+                        de 5px et un largeur de 200px, la "boîte" affichée fera de l'extérieur des bordures
                         212 px de large.
                     </p>
                     <p>
@@ -226,10 +319,12 @@ Enim accusamus amet libero non,
                         depuis les bordures, on doit la forcer à "border-box"
                     </p>
                     <div class="test-content-box">
-                        <div class="moitie"></div><div class="moitie"></div>
+                        <div class="moitie"></div>
+                        <div class="moitie"></div>
                     </div>
                     <div class="test-border-box">
-                        <div class="moitie"></div><div class="moitie"></div>
+                        <div class="moitie"></div>
+                        <div class="moitie"></div>
                     </div>
                     <p>
                         Les tailles calculées : si vous voulez utiliser

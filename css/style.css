@@ -23,12 +23,15 @@ si 2em = 32 px, 1em = 16px
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1rem;
     line-height: 1.4rem;
+    color: #0B0D09;
     /* variables en CSS */
     --heading-font: 'wonderland2';
     --page-header-bg: #f2ebdc;
     --page-nav-princ-bg: #f2ebdc;
     --h1-font-color: #F22233;
     --rouge-gras-font-color: #F22233;
+    --nav-link-color: #F22233;
+    --nav-link-hover-bg-color: #0b0d09;
     --element-gutter-size: 0.5rem;
     --column-1-1: calc( 100% - calc( 2 * var(--element-gutter-size) ) );
     --column-1-2: calc( 50% - calc( 2 * var(--element-gutter-size) ) );
@@ -73,6 +76,30 @@ si 2em = 32 px, 1em = 16px
     color: var(--rouge-gras-font-color);
     font-weight: bold;
 }
+
+.titre-section{
+    font-family: var(--heading-font);
+    font-weight: bold;
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+.center-swipper{
+   text-align: center;
+}
+
+.swiper-slide img{
+    max-height: 400px;
+}
+
+.swiper-slide figure{
+    margin: 0 0 50px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* déclaration générale sur des éléments */
 
 h1{
@@ -109,6 +136,24 @@ body > nav{
 
 body > nav ul{
     margin: 0;
+    line-height: 2rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+body > nav ul a{
+    display: block;
+    text-decoration: none;
+    color: var(--nav-link-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+body > nav ul a:hover,
+body > nav ul a:focus
+{
+    background-color: var(--nav-link-hover-bg-color);
 }
 
 body > main{
