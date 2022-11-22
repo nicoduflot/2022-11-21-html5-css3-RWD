@@ -38,6 +38,9 @@ si 2em = 32 px, 1em = 16px
     --footer-li-link: #F22233;
     --nav-link-hover-bg-color: #736451;
     --element-gutter-size: 0.5rem;
+    --article-button-border: #40382A;
+    --article-button-font-color: #40382A;
+    --article-button-bg: #F2EBDC;
     --column-1-1: calc( 100% - calc( 2 * var(--element-gutter-size) ) );
     --column-1-2: calc( 50% - calc( 2 * var(--element-gutter-size) ) );
     /* --column-1-3 reçoit 33% de l'espace dispo moins deux fois la largeur des goutières */
@@ -198,6 +201,23 @@ body > main > section > aside{
     width: var(--column-1-1);
     margin-left: auto;
     margin-right: auto;
+}
+
+body > main > section > article footer{
+    text-align: center;
+}
+
+article footer button{
+    border: 2px solid var(--article-button-border);
+    color: var(--article-button-font-color);
+    background-color: var(--article-button-bg);
+    border-radius: 3rem;
+}
+
+article footer button:hover{
+    color: var(--article-button-bg);
+    background-color: var(--article-button-font-color);
+    border-radius: 3rem;
 }
 
 body > footer{
