@@ -177,6 +177,20 @@ img{
     max-width: 100%;
 }
 
+button[type="submit"], button[type="reset"]{
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+button[type="submit"] i, button[type="reset"] i{
+    font-size: 1.5rem;
+}
+
+button[type="submit"]:hover{
+    color: var(--nav-link-color);
+}
+
 a, a:visited{
     color: var(--general-link-color);
     text-decoration: none;

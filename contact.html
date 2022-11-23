@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation HTML5 - CSS3 - RWD</title>
+    <!-- Commentaire -->
+    <!-- 
+        C'est ici que l'on ajoute aussi le lien vers les fichiers CSS, et les connexion vers les fichiers de script (Javascript...)
+    -->
+    <link rel="stylesheet" href="./css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/print.css" media="print" />
+    <script>
+        window.addEventListener('DOMContentLoaded', function(){
+            let color = document.querySelector('input[type="color"]');
+            console.log(color);
+            let colorSelected = color.value;
+            document.querySelector('#colorSelected').innerHTML = colorSelected;
+            color.addEventListener('change', function(){
+                colorSelected = color.value;
+                console.log(colorSelected);
+                document.querySelector('#colorSelected').innerHTML = colorSelected;
+            });
+
+            let luminosite = document.querySelector('#luminosite');
+            console.log(luminosite);
+            let lumSelected = luminosite.value;
+            document.querySelector('#lumSelected').innerHTML = lumSelected;
+            luminosite.addEventListener('change', function(){
+                lumSelected = luminosite.value;
+                console.log(lumSelected);
+                document.querySelector('#lumSelected').innerHTML = lumSelected;
+            });
+            //lumSelected
+        });
+    </script>
+</head>
+
+<body id="top">
+    <header>
+        <h1>Formation HTML5 - CSS3 - RWD</h1>
+    </header>
+    <nav>
+        <ul>
+            <li class="separator"></li>
+            <li>
+                <a href="./index.html" title="Lien vers la page d'accueil">Accueil</a>
+            </li>
+            <li class="separator"></li>
+            <li>
+                <a href="./article.html" title="Lien vers l'article'">Article</a>
+            </li>
+            <li class="separator"></li>
+            <li>
+                <a href="./contact.html" title="Lien vers le formaulaire de contact'">Contact</a>
+            </li>
+            <li class="separator"></li>
+            <li>
+                <a href="./media.html" title="Lien vers la page des media'">Media</a>
+            </li>
+            <li class="separator"></li>
+            <li>
+                <a href="./animation.html" title="Lien vers les animations en CSS'">Animation CSS</a>
+            </li>
+            <li class="separator"></li>
+            <li>
+                <a href="./grid.html" title="Lien vers le CSS des grilles">Grilles CSS</a>
+            </li>
+            <li class="separator"></li>
+            <li>
+                <a href="./bootstrap.html" title="Lien vers la page bootstrap'">Bootstrap</a>
+            </li>
+            <li class="separator"></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="liste-article">
+            <article class="column-rwd">
+                <header>
+                    <h2>Formulaire</h2>
+                </header>
+                <main>
+                    <p>
+                        Les formulaires servent a récupérer des informations pour traitement, par exemple,
+                        un serveur php qui pourra les enregistrer en fichier, en bdd, ou les envoyer par mail
+                    </p>
+                    <p>
+                        Un formulaire se déclare à l'aide de la balise &lt;form&gt;. Il possède des attributs,
+                        dont les plus courants et importants sont : method & action
+                    </p>
+                    <h3>method</h3>
+                    <p>
+                        méthode d'envoi des informations du formulaire, il en existe deux :
+                    </p>
+                    <ul>
+                        <li>GET : les données sont envoyées associées à des
+                            noms de variables dans l'url de la page de traitement</li>
+                        <li>POST : Les données sont transmises en variables dans
+                            l'entête HTTP.
+                        </li>
+                    </ul>
+                    <p>
+                        Si la méthode n'est pas indiquée dans le formulaire,
+                        c'est GET qui sera utilisé par défaut
+                    </p>
+                    <h3>Action</h3>
+                    <p>
+                        Indique l'url de la page de traitement des données envoyées par le formulaire.
+                        Si action n'est pas précisé, le formulaire considère que c'est la page où il
+                        se trouve qui sera la page de traitement.
+                    </p>
+                    <h3>Notre formulaire</h3>
+                    <form method="get" action="./contact.html">
+                        <fieldset>
+                            <legend>
+                                Civilité
+                            </legend>
+                            <p>
+                                <label for="nom">
+                                    Nom :
+                                </label>
+                                <input type="text" name="nom" id="nom" autofocus placeholder="Entrez votre nom" required
+                                    aria-describedby="info-nom" />
+                            <div class="form-info" id="info-nom">
+                                Dans ce champs, indiquez votre nom de famille.
+                            </div>
+                            </p>
+                            <p>
+                                <label for="prenom">
+                                    prénom :
+                                </label>
+                                <input type="text" name="prenom" id="prenom" placeholder="Entrez votre prénom"
+                                    aria-describedby="info-prenom" />
+                            <div class="form-info" id="info-prenom">
+                                Dans ce champs, indiquez votre prénom.
+                            </div>
+                            </p>
+                            <p>
+                                <label for="email">
+                                    Email :
+                                </label>
+                                <input type="email" name="email" id="email" placeholder="Entrez votre email"
+                                    aria-describedby="info-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,12}$"
+                                    required />
+                            <div class="form-info" id="info-email">
+                                Dans ce champs, indiquez votre email. <br />
+                                au format identifiant@societe.domaine
+                            </div>
+                            </p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>
+                                Votre demande d'échantillon
+                            </legend>
+                            <p>
+                                <label for="besoin">
+                                    Description de votre besoin
+                                </label>
+                                <textarea name="besoin" id="besoin" placeholder="Décrivez votre besoin"></textarea>
+                            </p>
+                            <p>
+                                <label for="materiaux">
+                                    Type de tissus
+                                </label>
+                                <select name="materiaux" id="materiaux">
+                                    <option value="invalid">
+                                        Choix du type de tissu
+                                    </option>
+                                    <optgroup label="Toile occultante">
+                                        <option value="M1">Occultant M1</option>
+                                        <option value="M2">Occultant M2</option>
+                                        <option value="M4">Occultant M4</option>
+                                    </optgroup>
+                                    <optgroup label="Toile anti-feu">
+                                        <option value="A1">Anti-feu A1</option>
+                                        <option value="A2">Anti-feu A2</option>
+                                        <option value="A4">Anti-feu A4</option>
+                                    </optgroup>
+                                    <optgroup label="anti-feu imperméables">
+                                        <option value="A2-1">Anti-feu A2-1</option>
+                                        <option value="A2-2">Anti-feu A2-2</option>
+                                    </optgroup>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="couleur">Couleur</label>
+                                <input type="color" name="couleur" id="couleur" aria-describedby="info-couleur" />
+                                <span id="colorSelected"></span>
+                                <div class="form-info " id="info-couleur">
+                                    Dans ce champs, entrez l'adresse de votre site web.
+                                </div>
+                            </p>
+                            <p>
+                                <label for="luminosite">Luminosité</label>
+                                <input type="range" name="luminosite" id="luminosite" min="0" max="5" step="1" aria-describedby="info-luminosite" /> 
+                                <span id="lumSelected"></span>
+                                <div class="form-info " id="info-luminosite">
+                                    Dans ce champs, indiquez la luminosité du site : 0 pour très sombre à 5 pour très lumineux.
+                                </div>
+                            </p>
+                            <p>
+                                <label for="dateLimiteEnvoi">Date Limite</label>
+                                <input type="date" name="dateLimiteEnvoi" id="dateLimiteEnvoi" aria-describedby="info-dateLimiteEnvoi" />
+                                <div class="form-info " id="info-dateLimiteEnvoi">
+                                    Dans ce champs, indiquez la date après laquelle vous voulez l'échantillon
+                                </div>
+                            </p>
+                            <p>
+                                <label>
+                                    Les moyent pour vous contacter
+                                </label>
+                                <input type="checkbox" name="contact-mail" id="contact-mail" /> 
+                                <label for="contact-mail">Par email</label>
+                                <input type="checkbox" name="contact-telephone" id="contact-telephone" /> 
+                                <label for="contact-telephone">Par téléphone</label>
+                                <input type="checkbox" name="contact-courrier" id="contact-courrier" /> 
+                                <label for="contact-courrier">Par courrier</label>
+                            </p>
+                            <p>
+                                <label>La demande est pour :</label>
+                                <input type="radio" name="type-personne" id="personne-physique" value="physique" checked aria-checked="true" /> 
+                                <label for="personne-physique">Personne physique</label>
+                                <input type="radio" name="type-personne" id="personne-morale" value="morale" /> 
+                                <label for="personne-morale">Personne morale</label>
+                            </p>
+                        </fieldset>
+                        <input type="hidden" name="cache" id="cache" value="ceci est une info cachée à la vue de l'utilisateur" />
+                        <p>
+                            <button type="submit" name="submitForm" id="submitForm" value="Envoyer"
+                                title="Envoyer le formulaire">
+                                <i class="bi bi-send"></i>
+                            </button> 
+
+                            <button type="reset" name="resetForm" id="resetForm"
+                                title="Vider tous les champs du formulaire">
+                                <i class="bi bi-x-circle-fill"></i>
+                            </button> 
+                        </p>
+                    </form>
+                </main>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <div>
+                <h4>Site Map</h4>
+                <ul>
+                    <li>
+                        <a href="./index.html" title="Lien vers la page d'accueil">
+                            <i class="bi bi-arrow-right-circle-fill"></i> Accueil
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./article.html" title="Lien vers l'article'">
+                            <i class="bi bi-arrow-right-circle-fill"></i> Article
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contact.html" title="Lien vers le formaulaire de contact'">
+                            <i class="bi bi-arrow-right-circle-fill"></i> Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./media.html" title="Lien vers la page des media'">
+                            <i class="bi bi-arrow-right-circle-fill"></i> Media
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./animation.html" title="Lien vers les animations en CSS'">
+                            <i class="bi bi-arrow-right-circle-fill"></i> Animation CSS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./grid.html" title="Lien vers le CSS des grilles"><i
+                                class="bi bi-arrow-right-circle-fill"></i> Grilles CSS</a>
+                    </li>
+                    <li>
+                        <a href="./bootstrap.html" title="Lien vers la page bootstrap'">
+                            <i class="bi bi-arrow-right-circle-fill"></i> Bootstrap
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4>Liens Institutionnels</h4>
+                <ul>
+                    <li>
+                        <a href="#" title="Lien vers les Conditions G
+                        énérales d'Utilisati
+                        on">
+                            <i class="bi bi-arrow-right-circle-fill"></i> CGU
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contact.html" title="Lien vers le formaulaire de contact'">
+                            <i class="bi bi-arrow-right-circle-fill"></i> Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="Lien vers le blog de maison du monde'">
+                            <i class="bi bi-arrow-right-circle-fill"></i> Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="Lien vers nos valeur'">
+                            <i class="bi bi-arrow-right-circle-fill"></i> Nos valeurs
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="Lien vers la page de nos partenaire'">
+                            <i class="bi bi-arrow-right-circle-fill"></i> Partenaire
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4>En complément</h4>
+                <ul>
+                    <li>
+                        <a href="https://www.creativebloq.com" title="creative bloq, site de veille web et design">
+                            <i class="bi bi-arrow-right-circle-fill"></i> Creative Bloq
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://icons.getbootstrap.com/" title="icones web par bootstrap">
+                            <i class="bi bi-arrow-right-circle-fill"></i> Bootstrap Icons
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.dafont.com/fr/" title="site de polices de caractère">
+                            <i class="bi bi-arrow-right-circle-fill"></i> Dafont.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://everythingfonts.com/font-face" title="Outils de création de font-face CSS">
+                            <i class="bi bi-arrow-right-circle-fill"></i> Font-face generator
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3.org/TR/wai-aria-1.1/" title="Les normes aria W3C">
+                            <i class="bi bi-arrow-right-circle-fill"></i> W3C Aria
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
