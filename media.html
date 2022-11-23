@@ -61,7 +61,17 @@
                     <h2>Vidéos hébergées sur le site</h2>
                 </header>
                 <main>
+                    <p>
+                        on utilise la balise &lt;video&gt;
+                    </p>
+                    <p>
+                        la source de la vidéo est directement intégrée dans la balise, attention au format, si le navigateur ne peut pas lire ce format la vidéo ne s'affiche pas
+                    </p>
                     <video src="./media/videos/Fallout-4-Launch-Trailer.mp4" controls preload="auto"></video>
+                    <p>
+                        Ici la source de la vidéo est intégrée dans des balises sources contenant différents formats de la même vidéo, 
+                        cela permet si le navigateur ne lit pas certains formats de lui permettre d'afficher le format qu'il est capable de lire.
+                    </p>
                     <video controls>
                         <source src="./media/videos/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
                         <source src="./media/videos/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
@@ -99,6 +109,37 @@
                     <figure class="pdf">
                         <iframe class="video" src="./documents/CRAM.pdf" width="100%" height="100%"></iframe>
                     </figure>
+                </main>
+            </article>
+            <article class="column-rwd">
+                <header>
+                    <h2>L'audio hébergé sur le site</h2>
+                </header>
+                <main>
+                    <p>
+                        on utilise la balise &lt;audio&gt;
+                    </p>
+                    <p>
+                        Soit : <br />
+                        la source de l'audio' est directement intégrée dans la balise, attention au format, si le navigateur ne peut pas lire ce format l'audio' ne se lit pas
+                    </p>
+                    <p>
+                        Ici la source de l'audio est intégrée dans des balises sources contenant différents formats du même son, 
+                        cela permet si le navigateur ne lit pas certains formats de lui permettre de jouer le format qu'il est capable de lire.
+                    </p>
+                    <audio controls>
+                        <source src="./media/audio/diablo_town.mp3" type="audio/mp3" />
+                    </audio>
+                    <h3>Audio hébergé sur un site tiers</h3>
+                    <p>
+                        sur soundcloud
+                    </p>
+                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/342438726&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/lizzomusic" title="Lizzo" target="_blank" style="color: #cccccc; text-decoration: none;">Lizzo</a> · <a href="https://soundcloud.com/lizzomusic/truth-hurts" title="Truth Hurts" target="_blank" style="color: #cccccc; text-decoration: none;">Truth Hurts</a></div>
+                    <p>
+                        sur Bandcamp
+                    </p>
+                    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3828771716/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/track=3188101176/transparent=true/" seamless><a href="https://weswaltz.bandcamp.com/album/more-is-more">More Is More by Wes Waltz</a></iframe>
+                    
                 </main>
             </article>
         </section>
