@@ -1,4 +1,4 @@
-@import url('./wonderland2.css');
+@import url("./wonderland2.css");
 /*
 tous les imports de css dans un autre CSS sont a déclarer ABSOLUMENT en début de fichier
 */
@@ -19,448 +19,553 @@ si 2em = 32 px, 1em = 16px
 
 /* on peut surcharger la "racine" des déclarations CSS */
 
-:root{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.4rem;
-    color: #0B0D09;
-    /* variables en CSS */
-    --heading-font: 'wonderland2';
-    --heading-text-shadow-color: #0b0d09;
-    --info-box-shadow-color: rgba(11, 13, 9, 0.5);
-    --page-header-bg: #f2ebdc;
-    --page-nav-princ-bg: #f2ebdc;
-    --h1-font-color: #f2ebdc;
-    --general-heading-font-color: #F22233;
-    --rouge-gras-font-color: #F22233;
-    --nav-link-color: #F22233;
-    --nav-link-color-hover: #40382A;
-    --general-link-color: #F22233;
-    --footer-li-link: #F22233;
-    --nav-link-hover-bg-color: #736451;
-    --element-gutter-size: 0.5rem;
-    --article-button-border: #40382A;
-    --article-button-font-color: #40382A;
-    --article-button-bg: #F2EBDC;
-    --main-footer-bg: #F2EBDC;
-    --info-pratique-bg: rgb(206, 236, 245);
-    --info-pratique-border-color: rgb(127, 189, 207);
-    --info-document-bg: rgb(205, 245, 225);
-    --info-document-border-color: rgb(140, 202, 171);
-    --info-autre-bg: rgb(229, 206, 245);
-    --info-autre-border-color: rgb(194, 127, 207);
-    --column-1-1: calc( 100% - calc( 2 * var(--element-gutter-size) ) );
-    --column-1-2: calc( 50% - calc( 2 * var(--element-gutter-size) ) );
-    /* --column-1-3 reçoit 33% de l'espace dispo moins deux fois la largeur des goutières */
-    --column-1-3: calc( 33% - calc( 2 * var(--element-gutter-size) ) );
-    --column-1-4: calc( 25% - calc( 2 * var(--element-gutter-size) ) );
-    --column-2-3: calc( 66% - calc( 2 * var(--element-gutter-size) ) );
-    --column-3-4: calc( 75% - calc( 2 * var(--element-gutter-size) ) );
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  color: #0b0d09;
+  /* variables en CSS */
+  --heading-font: "wonderland2";
+  --heading-text-shadow-color: #0b0d09;
+  --info-box-shadow-color: rgba(11, 13, 9, 0.5);
+  --page-header-bg: #f2ebdc;
+  --page-nav-princ-bg: #f2ebdc;
+  --h1-font-color: #f2ebdc;
+  --general-heading-font-color: #f22233;
+  --rouge-gras-font-color: #f22233;
+  --nav-link-color: #f22233;
+  --nav-link-color-hover: #40382a;
+  --general-link-color: #f22233;
+  --footer-li-link: #f22233;
+  --nav-link-hover-bg-color: #736451;
+  --element-gutter-size: 0.5rem;
+  --article-button-border: #40382a;
+  --article-button-font-color: #40382a;
+  --article-button-bg: #f2ebdc;
+  --main-footer-bg: #f2ebdc;
+  --info-pratique-bg: rgb(206, 236, 245);
+  --info-pratique-border-color: rgb(127, 189, 207);
+  --info-document-bg: rgb(205, 245, 225);
+  --info-document-border-color: rgb(140, 202, 171);
+  --info-autre-bg: rgb(229, 206, 245);
+  --info-autre-border-color: rgb(194, 127, 207);
+  --column-1-1: calc(100% - calc(2 * var(--element-gutter-size)));
+  --column-1-2: calc(50% - calc(2 * var(--element-gutter-size)));
+  /* --column-1-3 reçoit 33% de l'espace dispo moins deux fois la largeur des goutières */
+  --column-1-3: calc(33% - calc(2 * var(--element-gutter-size)));
+  --column-1-4: calc(25% - calc(2 * var(--element-gutter-size)));
+  --column-2-3: calc(66% - calc(2 * var(--element-gutter-size)));
+  --column-3-4: calc(75% - calc(2 * var(--element-gutter-size)));
 }
 
 /* classes déclarée pour le document */
 
-*, 
-*::before, 
-*::after{
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.test-content-box div{
-    box-sizing: content-box;
+.test-content-box div {
+  box-sizing: content-box;
 }
 
-.moitie{
-    width: 50%;
-    height: 10px;
-    border: 1px solid black;
-    padding: 10px;
-    display: inline-block;
+.moitie {
+  width: 50%;
+  height: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  display: inline-block;
 }
 
-.deuxEm{
-    font-size: 2em;
-    border: 1px solid black;
-    padding: 20px;
+.deuxEm {
+  font-size: 2em;
+  border: 1px solid black;
+  padding: 20px;
 }
 
-.deuxRem{
-    font-size: 2rem;
-    border: 1px solid black;
-    padding: 20px;
+.deuxRem {
+  font-size: 2rem;
+  border: 1px solid black;
+  padding: 20px;
 }
 
-.rouge-gras{
-    color: var(--rouge-gras-font-color);
-    font-weight: bold;
+.rouge-gras {
+  color: var(--rouge-gras-font-color);
+  font-weight: bold;
 }
 
-.titre-section{
-    font-family: var(--heading-font);
-    font-weight: bold;
-    width: 100%;
-    padding: 5px 10px;
-    font-size: 2rem;
-    line-height: 2.5rem;
+.titre-section {
+  font-family: var(--heading-font);
+  font-weight: bold;
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 
-.center-swipper{
-   text-align: center;
+.center-swipper {
+  text-align: center;
 }
 
-.swiper-slide img{
-    max-height: 400px;
+.swiper-slide img {
+  max-height: 400px;
 }
 
-.swiper-slide figure{
-    margin: 0 0 50px 0;
-    margin-left: auto;
-    margin-right: auto;
+.swiper-slide figure {
+  margin: 0 0 50px 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.article{
-    display: flex;
-    flex-direction: column-reverse;
+.article {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
-.information{
-    margin-bottom: 20px;
+.information {
+  margin-bottom: 20px;
 }
 
-.info{
-    border: 2px solid transparent;
-    padding: 5px;
-    border-radius: 10px;
-    /*box-shadow: 0 0 15px var(--info-box-shadow-color);*/
-    margin-bottom: 20px;
+.info {
+  border: 2px solid transparent;
+  padding: 5px;
+  border-radius: 10px;
+  /*box-shadow: 0 0 15px var(--info-box-shadow-color);*/
+  margin-bottom: 20px;
 }
 
-.info h4{
-    margin-top: 0;
+.info h4 {
+  margin-top: 0;
 }
 
-.pratique{
-    background-color: var(--info-pratique-bg);
-    border-color: var(--info-pratique-border-color);
+.pratique {
+  background-color: var(--info-pratique-bg);
+  border-color: var(--info-pratique-border-color);
 }
 
-.document{
-    background-color: var(--info-document-bg);
-    border-color: var(--info-document-border-color);
+.document {
+  background-color: var(--info-document-bg);
+  border-color: var(--info-document-border-color);
 }
 
-.autre{
-    background-color: var(--info-autre-bg);
-    border-color: var(--info-autre-border-color);
+.autre {
+  background-color: var(--info-autre-bg);
+  border-color: var(--info-autre-border-color);
 }
 
-.content{
-    margin-bottom: 20px;
+.content {
+  margin-bottom: 20px;
 }
 
 /* déclaration générale sur des éléments */
 
-h1{
-    margin: 0;
-    line-height: 2.5rem;
-    text-align: center;
-    color: var(--h1-font-color);
+h1 {
+  margin: 0;
+  line-height: 2.5rem;
+  text-align: center;
+  color: var(--h1-font-color);
 }
 
-h1, h2, h3, h4, h5, h6{
-    color: var(--general-heading-font-color);
-    font-family: var(--heading-font);
-    letter-spacing: 2px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--general-heading-font-color);
+  font-family: var(--heading-font);
+  letter-spacing: 2px;
 }
 
-img{
-    max-width: 100%;
+img {
+  max-width: 100%;
 }
 
-button[type="submit"], button[type="reset"]{
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
+button[type="submit"],
+button[type="reset"] {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
 }
 
-button[type="submit"] i, button[type="reset"] i{
-    font-size: 1.5rem;
+button[type="submit"] i,
+button[type="reset"] i {
+  font-size: 1.5rem;
 }
 
-button[type="submit"]:hover{
-    color: var(--nav-link-color);
+button[type="submit"]:hover {
+  color: var(--nav-link-color);
 }
 
-a, a:visited{
-    color: var(--general-link-color);
-    text-decoration: none;
+a,
+a:visited {
+  color: var(--general-link-color);
+  text-decoration: none;
 }
 
 a:hover,
-a:focus{
-    color: var(--nav-link-color-hover);
-    text-decoration: none;
+a:focus {
+  color: var(--nav-link-color-hover);
+  text-decoration: none;
 }
 
-button{
-    line-height: 1.5rem;
-    text-transform: uppercase;
-    font-weight: bold;
+button {
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 /* déclaration en suivant la structure, du général au particulier */
 
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
+
+form p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form label {
+  width: 100%;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form input[type="date"] {
+  width: 100%;
+  height: 2rem;
+}
+
+form p span{
+    width: 25%;
+    margin-left: 20%;
+    text-align: right;
+}
+
+input[type="color"],
+input[type="range"]{
+    width: 25%;
+}
+
+form textarea {
+  width: 100%;
+  height: 25vh;
+}
+
+.radio-check label{
+    width: 100%;
+  }
+
+  .radio-check label[for]{
+    width: 75%;
+  }
+
+  .radio-check input{
+    width: 20%;
+  }
+
+
 
 /* j'impacte en CSS les éléments header qui sont descendant direct de l'élément body */
 
-body > header{
-    background-color: var(--page-header-bg);
-    height: 20vh;
-    background: url('../images/alice-cards-design.jpg');
-    background-size:cover;
-    background-position: center center;
-    text-shadow: 0 0 5px var(--heading-text-shadow-color);
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body > header {
+  background-color: var(--page-header-bg);
+  height: 20vh;
+  background: url("../images/alice-cards-design.jpg");
+  background-size: cover;
+  background-position: center center;
+  text-shadow: 0 0 5px var(--heading-text-shadow-color);
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-body > nav{
-    background-color: var(--page-nav-princ-bg);
+body > nav {
+  background-color: var(--page-nav-princ-bg);
 }
 
-body > nav ul{
-    margin: 0;
-    line-height: 2rem;
-    list-style-type: none;
-    padding: 0;
+body > nav ul {
+  margin: 0;
+  line-height: 2rem;
+  list-style-type: none;
+  padding: 0;
 }
 
-body > nav ul a{
-    display: block;
-    text-decoration: none;
-    color: var(--nav-link-color);
-    text-transform: uppercase;
-    font-weight: bold;
-    padding-left: 25px;
-    padding-right: 25px;
+body > nav ul a {
+  display: block;
+  text-decoration: none;
+  color: var(--nav-link-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 body > nav ul a:hover,
-body > nav ul a:focus
-{
-    background-color: var(--nav-link-hover-bg-color);
-    color: var(--page-nav-princ-bg);
+body > nav ul a:focus {
+  background-color: var(--nav-link-hover-bg-color);
+  color: var(--page-nav-princ-bg);
 }
 
 body > nav > ul,
 body > main,
-body > footer > div{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+body > footer > div {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 
 body > main > section > article,
-body > main > section > aside{
-    width: var(--column-1-1);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: var(--element-gutter-size);
-    margin-bottom: var(--element-gutter-size);
-    padding: 5px;
+body > main > section > aside {
+  width: var(--column-1-1);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--element-gutter-size);
+  margin-bottom: var(--element-gutter-size);
+  padding: 5px;
 }
 
-body > main > section > article footer{
-    text-align: center;
-    margin-top: 10px;
+body > main > section > article footer {
+  text-align: center;
+  margin-top: 10px;
 }
 
-article footer button{
-    border: 2px solid var(--article-button-border);
-    color: var(--article-button-font-color);
-    background-color: var(--article-button-bg);
-    border-radius: 3rem;
+article footer button {
+  border: 2px solid var(--article-button-border);
+  color: var(--article-button-font-color);
+  background-color: var(--article-button-bg);
+  border-radius: 3rem;
 }
 
-article footer button:hover{
-    color: var(--article-button-bg);
-    background-color: var(--article-button-font-color);
-    border-radius: 3rem;
+article footer button:hover {
+  color: var(--article-button-bg);
+  background-color: var(--article-button-font-color);
+  border-radius: 3rem;
 }
 
-body > footer{
-    background-color: var(--main-footer-bg);
+body > footer {
+  background-color: var(--main-footer-bg);
 }
 
-body > footer > div{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-between;
+body > footer > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-body > footer > div > div{
-    margin-left: var(--element-gutter-size);
-    margin-right: var(--element-gutter-size);
-    width: var(--column-1-2);
+body > footer > div > div {
+  margin-left: var(--element-gutter-size);
+  margin-right: var(--element-gutter-size);
+  width: var(--column-1-2);
 }
 
-body > footer > div > div > ul{
-    list-style-type: none;
-    line-height: 1.5rem;
-    padding: 0;
+body > footer > div > div > ul {
+  list-style-type: none;
+  line-height: 1.5rem;
+  padding: 0;
 }
 
 /* on sélectionne tout les li de la liste sauf celui qui en est le dernier enfant */
-body > footer > div > div > ul > li:not(body > footer > div > div > ul > li:last-child){
-    border-bottom-width: 1px;
-    border-bottom-color: var(--footer-li-link);
-    border-bottom-style: dashed;
+body
+  > footer
+  > div
+  > div
+  > ul
+  > li:not(body > footer > div > div > ul > li:last-child) {
+  border-bottom-width: 1px;
+  border-bottom-color: var(--footer-li-link);
+  border-bottom-style: dashed;
 }
 
-body > footer > div > div > ul > li a{
-    display: block;
+body > footer > div > div > ul > li a {
+  display: block;
 }
 
 @media screen and (min-width: 576px) {
-    body > nav ul,
-    body > main,
-    body > footer > div{
-        width: 540px
-    }
+  body > nav ul,
+  body > main,
+  body > footer > div {
+    width: 540px;
+  }
 
-    body > main > section.liste-article{
-        display: flex;
-        flex-wrap: wrap;
-    }
+  body > main > section.liste-article {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
+  form {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  form label {
+    width: 25%;
+  }
+
+  form label[for="besoin"] {
+    width: 100%;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"]{
+    width: 75%;
+    height: 2rem;
+  }
+
+  form input[type="date"],
+  form select {
+    width: 50%;
+  }
+
+  
 }
 
 @media screen and (min-width: 768px) {
-    body > nav ul,
-    body > main,
-    body > footer > div{
-        width: 720px
-    }
+  body > nav ul,
+  body > main,
+  body > footer > div {
+    width: 720px;
+  }
 
-    body > main > section.liste-article .column-rwd{
-        width: var(--column-1-2);
-    }
+  body > main > section.liste-article .column-rwd {
+    width: var(--column-1-2);
+  }
 
-    body > main > section.liste-article .column-rwd:last-child:nth-of-type(2n+1){
-        width: var(--column-1-1);
-    }
+  body
+    > main
+    > section.liste-article
+    .column-rwd:last-child:nth-of-type(2n + 1) {
+    width: var(--column-1-1);
+  }
 
-    body > nav > ul{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  body > nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    body > nav > ul > li{
-        border-right: 1px dashed var(--footer-li-link);
-    }
-    
-    body > nav > ul > li:first-child{
-        border-left: 1px dashed var(--footer-li-link);
-    }
-    
-    body > nav > ul > li a{
-        padding-left: 25px;
-        padding-right: 25px;
-    }
+  body > nav > ul > li {
+    border-right: 1px dashed var(--footer-li-link);
+  }
+
+  body > nav > ul > li:first-child {
+    border-left: 1px dashed var(--footer-li-link);
+  }
+
+  body > nav > ul > li a {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
 
 @media screen and (min-width: 992px) {
-    body > nav ul,
-    body > main,
-    body > footer > div{
-        width: 960px
-    }
+  body > nav ul,
+  body > main,
+  body > footer > div {
+    width: 960px;
+  }
 
-    body > footer > div > div{
-        width: var(--column-1-3);
-    }
+  body > footer > div > div {
+    width: var(--column-1-3);
+  }
 
-    .article{
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+  .article {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-    .information{
-        width: 230px;
-        margin-right: 20px;
-    }
+  .information {
+    width: 230px;
+    margin-right: 20px;
+  }
 
-    .content{
-        width: calc( 100% - 250px);
-    }
+  .content {
+    width: calc(100% - 250px);
+  }
 
-    .article .content figure{
-        width: 25%;
-    }
+  .article .content figure {
+    width: 25%;
+  }
 
-    .left{
-        float: left;
-    }
+  .left {
+    float: left;
+  }
 
-    .right{
-        float: right;
-    }
+  .right {
+    float: right;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    body > nav ul,
-    body > main,
-    body > footer > div{
-        width: 1140px
-    }
+  body > nav ul,
+  body > main,
+  body > footer > div {
+    width: 1140px;
+  }
 
-    body > main > section.liste-article .column-rwd{
-        width: var(--column-1-3);
-    }
+  body > main > section.liste-article .column-rwd {
+    width: var(--column-1-3);
+  }
 
-    body > main > section.liste-article .column-rwd:last-child:nth-of-type(3n + 1){
-        width: var(--column-1-1);
-    }
+  body
+    > main
+    > section.liste-article
+    .column-rwd:last-child:nth-of-type(3n + 1) {
+    width: var(--column-1-1);
+  }
 
-    body > main > section.liste-article .column-rwd:last-child:nth-of-type(3n+2){
-        width: var(--column-2-3);
-    }
+  body
+    > main
+    > section.liste-article
+    .column-rwd:last-child:nth-of-type(3n + 2) {
+    width: var(--column-2-3);
+  }
 }
 
 @media screen and (min-width: 1400px) {
-    body > nav ul,
-    body > main,
-    body > footer > div{
-        width: 1320px
-    }
+  body > nav ul,
+  body > main,
+  body > footer > div {
+    width: 1320px;
+  }
 }
 
 @media screen and (min-width: 1600px) {
-    body > nav ul,
-    body > main,
-    body > footer > div{
-        width: 1500px
-    }
+  body > nav ul,
+  body > main,
+  body > footer > div {
+    width: 1500px;
+  }
 
-    body > main > section.liste-article .column-rwd{
-        width: var(--column-1-4);
-    }
+  body > main > section.liste-article .column-rwd {
+    width: var(--column-1-4);
+  }
 
-    body > main > section.liste-article .column-rwd:last-child:nth-of-type(4n + 1){
-        width: var(--column-1-1);
-    }
+  body
+    > main
+    > section.liste-article
+    .column-rwd:last-child:nth-of-type(4n + 1) {
+    width: var(--column-1-1);
+  }
 
-    body > main > section.liste-article .column-rwd:last-child:nth-of-type(4n + 2){
-        width: var(--column-3-4);
-    }
+  body
+    > main
+    > section.liste-article
+    .column-rwd:last-child:nth-of-type(4n + 2) {
+    width: var(--column-3-4);
+  }
 
-    body > main > section.liste-article .column-rwd:last-child:nth-of-type(4n + 3){
-        width: var(--column-1-2);
-    }
+  body
+    > main
+    > section.liste-article
+    .column-rwd:last-child:nth-of-type(4n + 3) {
+    width: var(--column-1-2);
+  }
 }

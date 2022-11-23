@@ -123,20 +123,20 @@
                                 </label>
                                 <input type="text" name="nom" id="nom" autofocus placeholder="Entrez votre nom" required
                                     aria-describedby="info-nom" />
+                            </p>
                             <div class="form-info" id="info-nom">
                                 Dans ce champs, indiquez votre nom de famille.
                             </div>
-                            </p>
                             <p>
                                 <label for="prenom">
                                     prénom :
                                 </label>
                                 <input type="text" name="prenom" id="prenom" placeholder="Entrez votre prénom"
                                     aria-describedby="info-prenom" />
-                                <div class="form-info" id="info-prenom">
-                                    Dans ce champs, indiquez votre prénom.
-                                </div>
                             </p>
+                            <div class="form-info" id="info-prenom">
+                                Dans ce champs, indiquez votre prénom.
+                            </div>
                             <p>
                                 <label for="email">
                                     Email :
@@ -144,21 +144,21 @@
                                 <input type="email" name="email" id="email" placeholder="Entrez votre email"
                                     aria-describedby="info-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,12}$"
                                     required />
-                                <div class="form-info" id="info-email">
-                                    Dans ce champs, indiquez votre email. <br />
-                                    au format identifiant@societe.domaine
-                                </div>
                             </p>
+                            <div class="form-info" id="info-email">
+                                Dans ce champs, indiquez votre email. <br />
+                                au format identifiant@societe.domaine
+                            </div>
                             <p>
                                 <label for="telephone">
                                     Téléphone :
                                 </label>
-                                <input type="telephone" name="telephone" id="telephone" placeholder="Entrez votre téléphone"
+                                <input type="tel" name="telephone" id="telephone" placeholder="Entrez votre téléphone"
                                     aria-describedby="info-telephone" />
-                                <div class="form-telephone" id="info-telephone">
-                                    Dans ce champs, indiquez votre téléphone.
-                                </div>
                             </p>
+                            <div class="form-telephone" id="info-telephone">
+                                Dans ce champs, indiquez votre téléphone.
+                            </div>
                         </fieldset>
                         <fieldset>
                             <legend>
@@ -198,31 +198,31 @@
                                 <label for="couleur">Couleur</label>
                                 <input type="color" name="couleur" id="couleur" aria-describedby="info-couleur" />
                                 <span id="colorSelected"></span>
+                            </p>
                             <div class="form-info " id="info-couleur">
                                 Dans ce champs, entrez l'adresse de votre site web.
                             </div>
-                            </p>
                             <p>
                                 <label for="luminosite">Luminosité</label>
                                 <input type="range" name="luminosite" id="luminosite" min="0" max="5" step="1"
                                     aria-describedby="info-luminosite" />
                                 <span id="lumSelected"></span>
+                            </p>
                             <div class="form-info " id="info-luminosite">
                                 Dans ce champs, indiquez la luminosité du site : 0 pour très sombre à 5 pour très
                                 lumineux.
                             </div>
-                            </p>
                             <p>
                                 <label for="dateLimiteEnvoi">Date Limite</label>
                                 <input type="date" name="dateLimiteEnvoi" id="dateLimiteEnvoi"
                                     aria-describedby="info-dateLimiteEnvoi" />
+                            </p>
                             <div class="form-info " id="info-dateLimiteEnvoi">
                                 Dans ce champs, indiquez la date après laquelle vous voulez l'échantillon
                             </div>
-                            </p>
-                            <p>
+                            <p class="radio-check">
                                 <label>
-                                    Les moyent pour vous contacter
+                                    Les moyens pour vous contacter
                                 </label>
                                 <input type="checkbox" name="contact-mail" id="contact-mail" />
                                 <label for="contact-mail">Par email</label>
@@ -231,7 +231,7 @@
                                 <input type="checkbox" name="contact-courrier" id="contact-courrier" />
                                 <label for="contact-courrier">Par courrier</label>
                             </p>
-                            <p>
+                            <p class="radio-check">
                                 <label>La demande est pour :</label>
                                 <input type="radio" name="type-personne" id="personne-physique" value="physique" checked
                                     aria-checked="true" />
