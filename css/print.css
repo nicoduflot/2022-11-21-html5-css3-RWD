@@ -46,3 +46,48 @@ body > main > section.liste-article .column-rwd main {
   column-count: 2;
   column-rule: thin solid black;
 }
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 1rem;
+  grid-auto-rows: auto;
+  /* 
+  on répète le nombre de colonnes, la largeur de chaque colonne égale à (100% de l'espace - nbcolonne-1 gap (Xrem) ) divisé par le nombre de colonnes  
+  */
+  /*grid-template-columns: repeat( var(--sept-colonnes), calc(calc( 100% - 6rem ) / var(--sept-colonnes)) );*/
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-div {
+  border: 3px solid darkgreen;
+}
+
+#cell-1 {
+  /*grid-column: 1 / 4;*/
+  grid-column: span 3;
+}
+
+#cell-2 {
+  grid-row: span 1;
+}
+
+#cell-4 {
+  grid-column: span 2;
+}
+
+#cell-8{
+  grid-column: span 2;
+}
+
+#cell-9 {
+  grid-column: span 2;
+}
+
+#cell-10{
+  grid-column: span 2;
+}
+
+#cell-11 {
+  grid-column: span 4;
+}
