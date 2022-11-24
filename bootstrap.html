@@ -1,13 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formation HTML5 - CSS3 - RWD</title>
-    
+    <link rel="stylesheet" href="./css/bootstrap-icons.css" media="all" />
+    <link rel="stylesheet" href="./css/bootstrap.css" media="all" />
+    <script src="./js/bootstrap.bundle.js"></script>
 </head>
+
 <body>
-    
+    <header class="bg-dark text-white">
+        <div class="container">
+            <h1 class="mb-0">Formation HTML5 - CSS3 - RWD</h1>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="./" class="navbar-brand badge rounded-pill text-bg-warning">
+                <img class="img-fluid" src="./images/no-logo.svg" width="200" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html" title="Lien vers la page d'accueil">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./article.html" title="Lien vers l'article'">Article</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html" title="Lien vers le formaulaire de contact'">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./media.html" title="Lien vers la page des media'">Media</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./animation.html" title="Lien vers les animations en CSS'">Animation CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./trucs.html" title="Lien vers des trucs en CSS'">Trucs CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./grid.html" title="Lien vers le CSS des grilles">Grilles CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./bootstrap.html" title="Lien vers la page bootstrap'">Bootstrap</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <main class="container">
+        <section class="row justify-content-md-center">
+            <aside class="col-12 col-md-4">
+                <h4>Et aussi</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex odit perspiciatis voluptatibus pariatur
+                    error deleniti labore non illum, explicabo quo eos rerum laborum ducimus nostrum. Perferendis
+                    asperiores quia assumenda ullam?
+                </p>
+                <ul>
+                    <li>truc </li>
+                    <li>truc </li>
+                    <li>truc </li>
+                    <li>truc </li>
+                </ul>
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <h5>Ha ha</h5>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h5>Ho ho</h5>
+                        Laudantium consequuntur nesciunt aut adipisci.
+                    </div>
+                </div>
+            </aside>
+            <article class="col-12 col-md-4">
+                <header>
+                    <h2>Titre de l'article 1</h2>
+                </header>
+                <main>
+                    <h3>Intro</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit accusamus consequatur
+                        distinctio, omnis voluptas iure alias in aperiam inventore. Nostrum architecto voluptas impedit
+                        tenetur. Sapiente tempore totam quod explicabo natus.
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione beatae, facilis itaque
+                        eligendi dolor, animi saepe repellat quos exercitationem, dolore ea! Id iste magnam soluta eum
+                        placeat dolores odio. Cupiditate!
+                    </p>
+                </main>
+                <footer>
+                    <a href="./article.html" title="Lien vers l'article'">
+                        <button>
+                            <i class="bi bi-plus"></i> Lire la suite <i class="bi bi-plus"></i>
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article class="col-12 col-md-4">
+                <header>
+                    <h2>Titre de l'article 2</h2>
+                </header>
+                <main>
+                    <h3>Intro</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit accusamus consequatur
+                        distinctio, omnis voluptas iure alias in aperiam inventore. Nostrum architecto voluptas impedit
+                        tenetur. Sapiente tempore totam quod explicabo natus.
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione beatae, facilis itaque
+                        eligendi dolor, animi saepe repellat quos exercitationem, dolore ea! Id iste magnam soluta eum
+                        placeat dolores odio. Cupiditate!
+                    </p>
+                </main>
+                <footer>
+                    <a href="./article.html" title="Lien vers l'article'">
+                        <button>
+                            <i class="bi bi-plus"></i> Lire la suite <i class="bi bi-plus"></i>
+                        </button>
+                    </a>
+                </footer>
+            </article>
+        </section>
+        <section class="row">
+            <article class="col-12 col-md-4">
+                <header>
+                    <h2>Titre de l'article 3</h2>
+                </header>
+                <main>
+                    <h3>Intro</h3>
+                    <figure>
+                        <img class="img-fluid" src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" />
+                    </figure>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione beatae, facilis itaque
+                        eligendi dolor, animi saepe repellat quos exercitationem, dolore ea! Id iste magnam soluta eum
+                        placeat dolores odio. Cupiditate!
+                    </p>
+                </main>
+                <footer>
+                    <a href="./article.html" title="Lien vers l'article'">
+                        <button>
+                            <i class="bi bi-plus"></i> Lire la suite <i class="bi bi-plus"></i>
+                        </button>
+                    </a>
+                </footer>
+            </article>
+        </section>
+    </main>
+    <footer class="bg-dark text-white mt-2">
+        <div class="container">
+            <nav class="row">
+                <div class="col-6 col-sm-4 pt-2">
+                    <h4>Site Map</h4>
+                    <ul class="navbar-nav">
+                        <li>
+                            <a class="nav-link pb-0 pt-0" href="./index.html" title="Lien vers la page d'accueil">
+                                <i class="bi bi-arrow-right-circle-fill"></i> Accueil
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link pb-0 pt-0" href="./article.html" title="Lien vers l'article'">
+                                <i class="bi bi-arrow-right-circle-fill"></i> Article
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link pb-0 pt-0" href="./contact.html" title="Lien vers le formaulaire de contact'">
+                                <i class="bi bi-arrow-right-circle-fill"></i> Contact
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link pb-0 pt-0" href="./media.html" title="Lien vers la page des media'">
+                                <i class="bi bi-arrow-right-circle-fill"></i> Media
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link pb-0 pt-0" href="./animation.html" title="Lien vers les animations en CSS'">
+                                <i class="bi bi-arrow-right-circle-fill"></i> Animation CSS
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link pb-0 pt-0" href="./trucs.html" title="Lien vers des trucs en CSS'">
+                                <i class="bi bi-arrow-right-circle-fill"></i> Trucs CSS
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link pb-0 pt-0" href="./grid.html" title="Lien vers le CSS des grilles"><i
+                                    class="bi bi-arrow-right-circle-fill"></i> Grilles CSS</a>
+                        </li>
+                        <li>
+                            <a class="nav-link pb-0 pt-0" href="./bootstrap.html" title="Lien vers la page bootstrap'">
+                                <i class="bi bi-arrow-right-circle-fill"></i> Bootstrap
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-4 pt-2">
+                    <h4>Liens Institutionnels</h4>
+                    <ul class="navbar-nav">
+                        <li>
+                            <a class="nav-link pb-0 pt-0" href="#" title="Lien vers les Conditions G
+                            énérales d'Utilisati
+                            on">
+                                <i class="bi bi-arrow-right-circle-fill"></i> CGU
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link pb-0 pt-0" href="./contact.html" title="Lien vers le formaulaire de contact'">
+                                <i class="bi bi-arrow-right-circle-fill"></i> Contact
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link pb-0 pt-0" href="#" title="Lien vers le blog de maison du monde'">
+                                <i class="bi bi-arrow-right-circle-fill"></i> Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link pb-0 pt-0" href="#" title="Lien vers nos valeur'">
+                                <i class="bi bi-arrow-right-circle-fill"></i> Nos valeurs
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link pb-0 pt-0" href="#" title="Lien vers la page de nos partenaire'">
+                                <i class="bi bi-arrow-right-circle-fill"></i> Partenaire
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-4 pt-2">
+                    <h4>En complément</h4>
+                    <ul class="navbar-nav">
+                        <li>
+                            <a class="nav-link pb-0 pt-0" href="https://www.creativebloq.com" title="creative bloq, site de veille web et design">
+                                <i class="bi bi-arrow-right-circle-fill"></i> Creative Bloq
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link pb-0 pt-0" href="https://icons.getbootstrap.com/" title="icones web par bootstrap">
+                                <i class="bi bi-arrow-right-circle-fill"></i> Bootstrap Icons
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link pb-0 pt-0" href="https://www.dafont.com/fr/" title="site de polices de caractère">
+                                <i class="bi bi-arrow-right-circle-fill"></i> Dafont.com
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link pb-0 pt-0" href="https://everythingfonts.com/font-face" title="Outils de création de font-face CSS">
+                                <i class="bi bi-arrow-right-circle-fill"></i> Font-face generator
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link pb-0 pt-0" href="https://www.w3.org/TR/wai-aria-1.1/" title="Les normes aria W3C">
+                                <i class="bi bi-arrow-right-circle-fill"></i> W3C Aria
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </footer>
 </body>
+
 </html>

@@ -341,7 +341,7 @@ body > nav ul a:focus {
 
 body > nav > ul,
 body > main,
-body > footer > div {
+body > footer > div > nav {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -379,44 +379,39 @@ body > footer {
   background-color: var(--main-footer-bg);
 }
 
-body > footer > div {
+body > footer > div > nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-body > footer > div > div {
+body > footer > div > nav > div {
   margin-left: var(--element-gutter-size);
   margin-right: var(--element-gutter-size);
   width: var(--column-1-2);
 }
 
-body > footer > div > div > ul {
+body > footer > div > nav > div > ul {
   list-style-type: none;
   line-height: 1.5rem;
   padding: 0;
 }
 
 /* on sélectionne tout les li de la liste sauf celui qui en est le dernier enfant */
-body
-  > footer
-  > div
-  > div
-  > ul
-  > li:not(body > footer > div > div > ul > li:last-child) {
+body > footer > div > nav > div > ul > li:not(body > footer > div > nav > div > ul > li:last-child) {
   border-bottom-width: 1px;
   border-bottom-color: var(--footer-li-link);
   border-bottom-style: dashed;
 }
 
-body > footer > div > div > ul > li a {
+body > footer > div > nav > div > ul > li a {
   display: block;
 }
 
 @media screen and (min-width: 576px) {
   body > nav ul,
   body > main,
-  body > footer > div {
+  body > footer > div > nav {
     width: 540px;
   }
 
@@ -457,7 +452,7 @@ body > footer > div > div > ul > li a {
 @media screen and (min-width: 768px) {
   body > nav ul,
   body > main,
-  body > footer > div {
+  body > footer > div > nav {
     width: 720px;
   }
 
@@ -495,11 +490,11 @@ body > footer > div > div > ul > li a {
 @media screen and (min-width: 992px) {
   body > nav ul,
   body > main,
-  body > footer > div {
+  body > footer > div > nav {
     width: 960px;
   }
 
-  body > footer > div > div {
+  body > footer > div > nav > div {
     width: var(--column-1-3);
   }
 
@@ -537,7 +532,7 @@ main.content{
 @media screen and (min-width: 1200px) {
   body > nav ul,
   body > main,
-  body > footer > div {
+  body > footer > div > nav {
     width: 1140px;
   }
 
@@ -568,7 +563,7 @@ main.content{
 @media screen and (min-width: 1400px) {
   body > nav ul,
   body > main,
-  body > footer > div {
+  body > footer > div > nav {
     width: 1320px;
   }
 }
@@ -576,7 +571,7 @@ main.content{
 @media screen and (min-width: 1600px) {
   body > nav ul,
   body > main,
-  body > footer > div {
+  body > footer > div > nav {
     width: 1500px;
   }
 
