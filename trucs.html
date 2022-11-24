@@ -11,7 +11,16 @@
     -->
     <link rel="stylesheet" href="./css/bootstrap-icons.css" />
     <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/trucs.css" media="screen" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            let imgChange = document.querySelector('img.click-change');
+            imgChange.addEventListener('click', function () {
+                imgChange.classList.toggle('flip');
+            });
+        });
+    </script>
 </head>
 
 <body id="top">
@@ -57,93 +66,80 @@
     </nav>
     <main>
         <section class="liste-article">
-            <div class="titre-section">
-                Les media
-            </div>
             <article class="column-rwd">
                 <header>
-                    <h2>Vidéos hébergées sur le site</h2>
+                    <h2>Allez plus loin avec du CSS</h2>
                 </header>
-                <main>
+                <main class="content">
+                    <div class="cercle">
+
+                    </div>
+                    <div class="cercle-batman">
+
+                    </div>
+                    <div class="vignette avatar-01">
+
+                    </div>
+                    <div class="vignette avatar-02">
+
+                    </div>
+                    <div class="vignette avatar-03">
+
+                    </div>
+                    <div class="vignette avatar-04">
+
+                    </div>
+                    <hr />
+                    <div class="triangle">
+
+                    </div>
                     <p>
-                        on utilise la balise &lt;video&gt;
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quo enim quibusdam aspernatur
+                        autem vitae est doloribus quisquam sit consectetur neque nisi quaerat quos. Voluptates
+                        dignissimos hic aliquid numquam possimus.
                     </p>
                     <p>
-                        la source de la vidéo est directement intégrée dans la balise, attention au format, si le navigateur ne peut pas lire ce format la vidéo ne s'affiche pas
-                    </p>
-                    <video src="./media/videos/Fallout-4-Launch-Trailer.mp4" controls preload="auto"></video>
-                    <p>
-                        Ici la source de la vidéo est intégrée dans des balises sources contenant différents formats de la même vidéo, 
-                        cela permet si le navigateur ne lit pas certains formats de lui permettre d'afficher le format qu'il est capable de lire.
-                    </p>
-                    <video controls>
-                        <source src="./media/videos/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
-                        <source src="./media/videos/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
-                    </video>
-                </main>
-            </article>
-            <article class="column-rwd">
-                <header>
-                    <h2>Vidéos hébergées sur un site tier</h2>
-                </header>
-                <main>
-                    <p>
-                        Des sites tels que Youtube et dailymotion donnent la possibilité 
-                        d'incruster leurs vidéos sur nos sites, en utilisant la balise iframe.<br />
-                        L'iframe est une balise qui permet d'appeler une page 
-                        d'un autre site (ou du site actuel) dans un cadre délimité.<br />
-                        Il faut toutefois que le site ciblé autorise les iframes
-                    </p>
-                    <figure class="video">
-                        <iframe class="video" src="https://www.youtube.com/embed/PF2LmpoFPwk" width="100%" height="100%" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </figure>
-                    <figure class="video">
-                        <iframe class="video" src="https://www.dailymotion.com/embed/video/x289bz" width="100%" height="100%" allowfullscreen title="Dailymotion Video Player"></iframe>
-                    </figure>
-                </main>
-            </article>
-            <article class="column-rwd">
-                <header>
-                    <h2>Iframe</h2>
-                </header>
-                <main>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quo natus odit ea, minima hic quasi provident voluptas, dicta, ratione fugit? Consectetur nobis, sequi dolores excepturi sed eligendi dolorem aspernatur.
-                    </p>
-                    <figure class="pdf">
-                        <iframe class="video" src="./documents/CRAM.pdf" width="100%" height="100%"></iframe>
-                    </figure>
-                </main>
-            </article>
-            <article class="column-rwd">
-                <header>
-                    <h2>L'audio hébergé sur le site</h2>
-                </header>
-                <main>
-                    <p>
-                        on utilise la balise &lt;audio&gt;
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tenetur in nisi vero porro?
+                        Facere, perferendis. Voluptatem molestiae id doloribus ad maiores natus! Perferendis, placeat?
+                        Quas inventore praesentium adipisci est?
                     </p>
                     <p>
-                        Soit : <br />
-                        la source de l'audio' est directement intégrée dans la balise, attention au format, si le navigateur ne peut pas lire ce format l'audio' ne se lit pas
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea aut illo minus, quod illum excepturi
+                        inventore sunt enim hic deleniti nemo id alias dignissimos fugiat esse nulla quis voluptas odit?
                     </p>
                     <p>
-                        Ici la source de l'audio est intégrée dans des balises sources contenant différents formats du même son, 
-                        cela permet si le navigateur ne lit pas certains formats de lui permettre de jouer le format qu'il est capable de lire.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quo enim quibusdam aspernatur
+                        autem vitae est doloribus quisquam sit consectetur neque nisi quaerat quos. Voluptates
+                        dignissimos hic aliquid numquam possimus.
                     </p>
-                    <audio controls>
-                        <source src="./media/audio/diablo_town.mp3" type="audio/mp3" />
-                    </audio>
-                    <h3>Audio hébergé sur un site tiers</h3>
                     <p>
-                        sur soundcloud
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tenetur in nisi vero porro?
+                        Facere, perferendis. Voluptatem molestiae id doloribus ad maiores natus! Perferendis, placeat?
+                        Quas inventore praesentium adipisci est?
                     </p>
-                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/342438726&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/lizzomusic" title="Lizzo" target="_blank" style="color: #cccccc; text-decoration: none;">Lizzo</a> · <a href="https://soundcloud.com/lizzomusic/truth-hurts" title="Truth Hurts" target="_blank" style="color: #cccccc; text-decoration: none;">Truth Hurts</a></div>
                     <p>
-                        sur Bandcamp
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea aut illo minus, quod illum excepturi
+                        inventore sunt enim hic deleniti nemo id alias dignissimos fugiat esse nulla quis voluptas odit?
                     </p>
-                    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3828771716/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/track=3188101176/transparent=true/" seamless><a href="https://weswaltz.bandcamp.com/album/more-is-more">More Is More by Wes Waltz</a></iframe>
-                    
+                    <div class="test-box-shadow">
+
+                    </div>
+                    <div class="pixel-truc">
+
+                    </div>
+                    <div class="content-pixel">
+                        <div class="pixelart-to-css">
+    
+                        </div>
+                    </div>
+                    <div class="badge">
+                        <div class="txtFg">
+                            <h2>Cool le badge</h2>
+                        </div>
+                        <div class="imgFg"></div>
+                        <div class="imgMg"></div>
+                        <div class="imgBg"></div>
+                    </div>
                 </main>
             </article>
         </section>

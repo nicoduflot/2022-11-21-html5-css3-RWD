@@ -1,0 +1,175 @@
+.cercle{
+    width: 200px;
+    height: 200px;
+    background-color:brown ;
+    background-image: url('../images/pip-boy.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 3px solid cadetblue;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.cercle-batman{
+    width: 200px;
+    height: 200px;
+    background-color:brown ;
+    background-image: url('../images/action-batman-svg.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 3px solid cadetblue;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.vignette{
+    width: 52px;
+    height: 52px;
+    border: 1px solid black;
+    background-image: url('../images/multi-vignettes-sm-01.png');
+    margin: 10px;
+}
+
+.avatar-01{
+    background-position-x: 0;
+    background-position-y: 0;
+}
+
+.avatar-02{
+    background-position-x: 50px;
+    background-position-y: 0;
+}
+
+.avatar-03{
+    background-position-x: 0;
+    background-position-y: 50px;
+}
+
+.avatar-04{
+    background-position-x: 50px;
+    background-position-y: 50px;
+}
+
+.triangle{
+    --h-total-triangle: 50px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-left-width: calc( var(--h-total-triangle) / 2 );
+    border-right-width: calc( var(--h-total-triangle) / 2 );
+    border-bottom-width: calc( var(--h-total-triangle) * 0.866) ;
+    border-bottom-color: red;
+    margin: 10px;
+}
+
+p:nth-last-of-type(odd)::before{
+    content: "";
+    display: inline-block;
+    --h-total-triangle: 0.8rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-right-width: 0;
+    border-top-width: calc( var(--h-total-triangle) / 2 );
+    border-bottom-width: calc( var(--h-total-triangle) / 2 );
+    border-left-width: calc( var(--h-total-triangle) * 0.866) ;
+    border-left-color: red;
+}
+
+p:nth-last-of-type(even)::before{
+    content: "";
+    display: inline-block;
+    --h-total-triangle: 0.8rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-right-width: 0;
+    border-top-width: calc( var(--h-total-triangle) / 2 );
+    border-bottom-width: calc( var(--h-total-triangle) / 2 );
+    border-left-width: calc( var(--h-total-triangle) * 0.866) ;
+    border-left-color: darkgreen;
+}
+
+.test-box-shadow{
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 3px solid black;
+    box-shadow: inset 50px 40px gold;
+}
+
+.content-pixel{
+    background-image: url('../images/city-black-n-white.png');
+    background-size: cover;
+    background-position: center center;
+    height: 210px;
+    width: 210px;
+}
+
+.pixelart-to-css {
+    position: absolute;
+    box-shadow: 
+    20px 10px 0 0 rgba(0, 0, 0, 1), 30px 10px 0 0 rgba(0, 0, 0, 1), 100px 10px 0 0 rgba(0, 0, 0, 1), 10px 20px 0 0 rgba(0, 0, 0, 1), 20px 20px 0 0 rgba(255, 0, 0, 1), 30px 20px 0 0 rgba(255, 0, 0, 1), 40px 20px 0 0 rgba(0, 0, 0, 1), 90px 20px 0 0 rgba(0, 0, 0, 1), 100px 20px 0 0 rgba(0, 0, 0, 1), 10px 30px 0 0 rgba(0, 0, 0, 1), 20px 30px 0 0 rgba(255, 0, 0, 1), 30px 30px 0 0 rgba(0, 0, 0, 1), 40px 30px 0 0 rgba(255, 255, 255, 1), 50px 30px 0 0 rgba(0, 0, 0, 1), 80px 30px 0 0 rgba(0, 0, 0, 1), 90px 30px 0 0 rgba(255, 235, 59, 1), 100px 30px 0 0 rgba(0, 0, 0, 1), 20px 40px 0 0 rgba(0, 0, 0, 1), 30px 40px 0 0 rgba(255, 255, 255, 1), 40px 40px 0 0 rgba(255, 255, 255, 1), 50px 40px 0 0 rgba(0, 0, 0, 1), 70px 40px 0 0 rgba(0, 0, 0, 1), 80px 40px 0 0 rgba(255, 235, 59, 1), 90px 40px 0 0 rgba(0, 0, 0, 1), 30px 50px 0 0 rgba(0, 0, 0, 1), 40px 50px 0 0 rgba(0, 0, 0, 1), 60px 50px 0 0 rgba(0, 0, 0, 1), 70px 50px 0 0 rgba(255, 235, 59, 1), 80px 50px 0 0 rgba(0, 0, 0, 1), 70px 60px 0 0 rgba(0, 0, 0, 1), 80px 60px 0 0 rgba(255, 235, 59, 1), 90px 60px 0 0 rgba(0, 0, 0, 1), 60px 70px 0 0 rgba(0, 0, 0, 1), 70px 70px 0 0 rgba(255, 235, 59, 1), 80px 70px 0 0 rgba(0, 0, 0, 1), 50px 80px 0 0 rgba(0, 0, 0, 1), 60px 80px 0 0 rgba(255, 235, 59, 1), 70px 80px 0 0 rgba(0, 0, 0, 1), 40px 90px 0 0 rgba(0, 0, 0, 1), 50px 90px 0 0 rgba(255, 235, 59, 1), 60px 90px 0 0 rgba(0, 0, 0, 1), 30px 100px 0 0 rgba(0, 0, 0, 1), 40px 100px 0 0 rgba(0, 0, 0, 1), 50px 100px 0 0 rgba(0, 0, 0, 1);
+    height: 10px;
+    width: 10px;
+    margin: 10px 200px 200px 10px;
+  }
+
+.pixel-truc{
+    background-color: grey;
+    width: 10px;
+    height: 10px;
+    margin: 10px 100px 100px 10px;
+    box-shadow: 0 0 grey,       10px 0 black,       20px 0 black,       30px 0 grey,
+                0 10px black,   10px 10px darkred,  20px 10px darkred,  30px 10px black ;
+}
+
+.badge{
+    margin-top: 20px;
+    width: 338px;
+    height: 338px;
+    position: relative;
+}
+
+.txtFg{
+    position: absolute;
+    z-index: 4;
+    text-align: center;
+    top: 100px;
+    left: 28px;
+    font-size: 2rem;
+}
+
+.imgFg{
+    width: 250px;
+    height: 250px;
+    top: 40px;
+    left: 35px;
+    background-image: url('../images/pip-boy.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    position: absolute;
+    z-index: 3;
+}
+
+.imgMg{
+    width: 338px;
+    height: 338px;
+    background-image: url('../images/superposition/logo-pt2.png');
+    position: absolute;
+    z-index: 2;
+}
+
+.imgBg{
+    width: 338px;
+    height: 338px;
+    background-image: url('../images/superposition/logo-pt1.png');
+    position: absolute;
+}
