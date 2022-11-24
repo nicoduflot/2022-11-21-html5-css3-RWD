@@ -1,0 +1,14 @@
+$not-so-black: #0b0d09;
+
+/* 
+map des breakpoints 
+taille: largeur max en pixel
+*/
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+    xxxl: 1600px
+);

@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/* 
+map des breakpoints 
+taille: largeur max en pixel
+*/
+@import url("../css/bootstrap-icons.css");
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  color: #0b0d09;
+  /* variables en CSS */
+  --heading-font: "wonderland2";
+  --heading-text-shadow-color: #0b0d09;
+  --info-box-shadow-color: rgba(11, 13, 9, 0.5);
+  --page-header-bg: #f2ebdc;
+  --page-nav-princ-bg: #f2ebdc;
+  --h1-font-color: #f2ebdc;
+  --general-heading-font-color: #f22233;
+  --rouge-gras-font-color: #f22233;
+  --nav-link-color: #f22233;
+  --nav-link-color-hover: #40382a;
+  --general-link-color: #f22233;
+  --footer-li-link: #f22233;
+  --nav-link-hover-bg-color: #736451;
+  --element-gutter-size: 0.5rem;
+  --article-button-border: #40382a;
+  --article-button-font-color: #40382a;
+  --article-button-bg: #f2ebdc;
+  --main-footer-bg: #f2ebdc;
+  --info-pratique-bg: rgb(206, 236, 245);
+  --info-pratique-border-color: rgb(127, 189, 207);
+  --info-document-bg: rgb(205, 245, 225);
+  --info-document-border-color: rgb(140, 202, 171);
+  --info-autre-bg: rgb(229, 206, 245);
+  --info-autre-border-color: rgb(194, 127, 207);
+  --column-1-1: calc(100% - calc(2 * var(--element-gutter-size)));
+  --column-1-2: calc(50% - calc(2 * var(--element-gutter-size)));
+  /* --column-1-3 reçoit 33% de l'espace dispo moins deux fois la largeur des goutières */
+  --column-1-3: calc(33% - calc(2 * var(--element-gutter-size)));
+  --column-1-4: calc(25% - calc(2 * var(--element-gutter-size)));
+  --column-2-3: calc(66% - calc(2 * var(--element-gutter-size)));
+  --column-3-4: calc(75% - calc(2 * var(--element-gutter-size)));
+}
+
+@font-face {
+  font-family: "wonderland2";
+  src: url("../fonts/wonderland2.eot");
+  src: url("../fonts/wonderland2.eot") format("embedded-opentype"), url("../fonts/wonderland2.woff2") format("woff2"), url("../fonts/wonderland2.woff") format("woff"), url("../fonts/wonderland2.ttf") format("truetype"), url("../fonts/wonderland2.svg#wonderland2") format("svg");
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "wonderland2";
+}
+
+/* 
+map des breakpoints 
+taille: largeur max en pixel
+*/
+body > header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body img {
+  max-width: 100%;
+}
+
+/* mixins */
+.info {
+  background: DarkGray;
+  box-shadow: 0 0 1px rgba(169, 169, 169, 0.25);
+  color: #fff;
+}
+
+.alert {
+  background: DarkRed;
+  box-shadow: 0 0 1px rgba(139, 0, 0, 0.25);
+  color: #fff;
+}
+
+.warning {
+  background: orange;
+  box-shadow: 0 0 1px rgba(255, 165, 0, 0.25);
+  color: #fff;
+}
+
+.success {
+  background: DarkGreen;
+  box-shadow: 0 0 1px rgba(0, 100, 0, 0.25);
+  color: #fff;
+}
+
+/* generate media queries */
+@media screen and (min-width: 576px) {
+  /* media sm largeur max 576px */
+}
+@media screen and (min-width: 768px) {
+  /* media md largeur max 768px */
+}
+@media screen and (min-width: 992px) {
+  /* media lg largeur max 992px */
+}
+@media screen and (min-width: 1200px) {
+  /* media xl largeur max 1200px */
+}
+@media screen and (min-width: 1400px) {
+  /* media xxl largeur max 1400px */
+}
+@media screen and (min-width: 1600px) {
+  /* media xxxl largeur max 1600px */
+}
+
+/*# sourceMappingURL=output.css.map */
