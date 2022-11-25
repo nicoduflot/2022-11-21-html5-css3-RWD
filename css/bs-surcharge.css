@@ -1,0 +1,82 @@
+@import url('./BAUHS93.css');
+
+:root{
+    --bs-custom-carousel-base-height: 200px;
+    --bs-custom-carousel-height: calc(100vw * 0.30);
+    --bs-custom-carousel-bg-color: rgba(0, 0, 0, 0.65);
+    --bs-carousel-zoom-rate: 1.1;
+}
+
+.navbar-toggler-icon.icon-custom{
+    background-image: url('../images/template/bank-white.svg');
+}
+
+.btn{
+    font-family: 'BAUHS93';
+    text-transform: uppercase;
+}
+
+.btn-no-logo{
+    border-color: var(--bs-btn-color);
+    border-width: 2px;
+    border-radius: 50px;
+}
+
+body > footer > div > nav > div > ul > li > a > i, 
+body > footer > div > nav > div > ul > li > a.nav-link, 
+body > footer > div > nav > div > h4, 
+h1, 
+.navbar-brand{
+    color: var(--bs-warning);
+}
+.custom-carousel .carousel-inner{
+    height: var(--bs-custom-carousel-base-height-height);
+}
+
+.custom-carousel .img-fluid{
+    width: unset!important;
+    height: var(--bs-custom-carousel-height)!important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.custom-carousel .carousel-caption, .custom-carousel .carousel-inner{
+    background-color: var(--bs-custom-carousel-bg-color);
+}
+
+@media screen and (min-width: 576px) {
+    .custom-carousel .img-fluid,
+    .custom-carousel .carousel-inner{
+        height: var(--bs-custom-carousel-height)!important;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .custom-carousel .img-fluid,
+    .custom-carousel .carousel-inner{
+        height: var(--bs-custom-carousel-height)!important;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .custom-carousel .img-fluid,
+    .custom-carousel .carousel-inner{
+        height: var(--bs-custom-carousel-height)!important;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .custom-carousel .img-fluid,
+    .custom-carousel .carousel-inner{
+        height: var(--bs-custom-carousel-height)!important;
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    .custom-carousel .img-fluid,
+    .custom-carousel .carousel-inner{
+        height: var(--bs-custom-carousel-height)!important;
+    }
+  }
+  @media screen and (min-width: 1600px) {
+    .custom-carousel .img-fluid,
+    .custom-carousel .carousel-inner{
+        height: var(--bs-custom-carousel-height)!important;
+    }
+  }

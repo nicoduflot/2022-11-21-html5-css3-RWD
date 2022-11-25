@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'BAUHS93';
+    src: url('../fonts/BAUHS93.eot');
+    src: url('../fonts/BAUHS93.eot') format('embedded-opentype'),
+         url('../fonts/BAUHS93.woff2') format('woff2'),
+         url('../fonts/BAUHS93.woff') format('woff'),
+         url('../fonts/BAUHS93.ttf') format('truetype'),
+         url('../fonts/BAUHS93.svg#BAUHS93') format('svg');
+}

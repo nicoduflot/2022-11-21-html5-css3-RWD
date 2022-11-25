@@ -8,10 +8,41 @@
     <title>Formation HTML5 - CSS3 - RWD</title>
     <link rel="stylesheet" href="./css/bootstrap-icons.css" media="all" />
     <link rel="stylesheet" href="./css/bootstrap.css" media="all" />
+    <link rel="stylesheet" href="./css/bs-surcharge.css" media="all" />
     <script src="./js/bootstrap.bundle.js"></script>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <span class="navbar-brand">Accès rapide</span>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop" aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon icon-custom"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTop">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Annuaire</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Sites des l'établissement
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
     <header class="bg-dark text-white">
         <div class="container">
             <h1 class="mb-0">Formation HTML5 - CSS3 - RWD</h1>
@@ -59,6 +90,46 @@
         </div>
     </nav>
     <main class="container">
+        <section class="row mt-2">
+            <div id="carouselExampleCaptions" class="carousel slide custom-carousel" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="./images/alice-cards-design.jpg" class="d-block w-100 img-fluid" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="3000">
+                    <img src="./images/gundam-take-off-01.gif" class="d-block w-100 img-fluid" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Second slide label</h5>
+                      <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="3000">
+                    <img src="./images/james-white-composite.jpg" class="d-block w-100 img-fluid" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>
         <section class="row justify-content-md-center">
             <aside class="col-12 col-md-4">
                 <h4>Et aussi</h4>
@@ -101,9 +172,9 @@
                         placeat dolores odio. Cupiditate!
                     </p>
                 </main>
-                <footer>
+                <footer class="text-center">
                     <a href="./article.html" title="Lien vers l'article'">
-                        <button>
+                        <button class="btn btn-warning btn-no-logo">
                             <i class="bi bi-plus"></i> Lire la suite <i class="bi bi-plus"></i>
                         </button>
                     </a>
@@ -126,9 +197,9 @@
                         placeat dolores odio. Cupiditate!
                     </p>
                 </main>
-                <footer>
+                <footer class="text-center">
                     <a href="./article.html" title="Lien vers l'article'">
-                        <button>
+                        <button class="btn btn-warning btn-no-logo">
                             <i class="bi bi-plus"></i> Lire la suite <i class="bi bi-plus"></i>
                         </button>
                     </a>
@@ -152,9 +223,9 @@
                         placeat dolores odio. Cupiditate!
                     </p>
                 </main>
-                <footer>
+                <footer class="text-center">
                     <a href="./article.html" title="Lien vers l'article'">
-                        <button>
+                        <button class="btn btn-warning btn-no-logo">
                             <i class="bi bi-plus"></i> Lire la suite <i class="bi bi-plus"></i>
                         </button>
                     </a>
@@ -172,9 +243,9 @@
                         placeat dolores odio. Cupiditate!
                     </p>
                 </main>
-                <footer>
+                <footer class="text-center">
                     <a href="./article.html" title="Lien vers l'article'">
-                        <button>
+                        <button class="btn btn-warning btn-no-logo">
                             <i class="bi bi-plus"></i> Lire la suite <i class="bi bi-plus"></i>
                         </button>
                     </a>
