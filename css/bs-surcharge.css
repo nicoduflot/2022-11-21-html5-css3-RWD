@@ -25,7 +25,7 @@
 body > footer > div > nav > div > ul > li > a > i, 
 body > footer > div > nav > div > ul > li > a.nav-link, 
 body > footer > div > nav > div > h4, 
-h1, 
+h1:not(.modal-dialog h1), 
 .navbar-brand{
     color: var(--bs-warning);
 }
@@ -42,6 +42,23 @@ h1,
 
 .custom-carousel .carousel-caption, .custom-carousel .carousel-inner{
     background-color: var(--bs-custom-carousel-bg-color);
+}
+
+.info-p{
+    display: none;
+}
+
+.actuelle{
+    display: block;
+}
+
+article, aside{
+    margin-top: 10px!important;
+    margin-bottom: 10px!important;
+}
+
+article footer{
+    margin-top: 10px;
 }
 
 @media screen and (min-width: 576px) {

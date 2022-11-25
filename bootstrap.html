@@ -10,45 +10,86 @@
     <link rel="stylesheet" href="./css/bootstrap.css" media="all" />
     <link rel="stylesheet" href="./css/bs-surcharge.css" media="all" />
     <script src="./js/bootstrap.bundle.js"></script>
+    <script>
+        /* attene du chargement de la page */
+        window.addEventListener('DOMContentLoaded', function(){
+            /* récupération de l'élément de la page (du DOM) qui a l'id info, ici, la liste en tabulation avec des lien dedans */
+            let cardHeader = document.querySelector('#info');
+            /* récupération de la liste des éléments a afficher selon la tabulation cliquée, ici, ils posssèdent la classe info-p */
+            let infoContent = document.querySelectorAll('.info-p');
+            /* on surveille le clique sur la liste */
+            cardHeader.addEventListener('click', function(event){
+                /* on récupère l'évènement clic sur la liste */
+                /* on annule l'effet du clic sur un lien */
+                event.preventDefault();
+                /* on récupère le dataset du lien qui correspond à la div d'info a afficher */
+                let infoAff = event.target.dataset.info;
+                /* on parcours tous les noeuds enfants de la liste de tab */
+                cardHeader.childNodes.forEach(function(value){
+                    /* on parcours les noeuds présent dans chaque li */
+                    value.childNodes.forEach(function(element){
+                        /* si un des noeud possède une liste de classe */
+                        if(element.classList !== undefined){
+                            /* on retire la classe active si elle existe */
+                            element.classList.remove('active');
+                        }
+                        /* on ajoute la classe active sur le lien qui a été cliqué */
+                        event.target.classList.add('active');
+                    });
+                });
+                /* on parcours la liste des éléments a afficher */
+                infoContent.forEach(function(value){
+                    /* on retire la classe actuelle de tous les éléments */
+                    value.classList.remove('actuelle');
+                });
+                /* on ajoute à l'élément a affiche qui possède l'id équivalent égal au dataset info du lien cliqué la class actuelle */
+                document.querySelector(`#${infoAff}`).classList.add('actuelle');
+            });
+        });
+    </script>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <span class="navbar-brand">Accès rapide</span>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop" aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon icon-custom"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTop">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Annuaire</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Sites des l'établissement
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <span class="navbar-brand">Accès rapide</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop"
+                aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon icon-custom"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTop">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Annuaire</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Sites des l'établissement
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
                 </ul>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-light" type="submit">Search</button>
-            </form>
-          </div>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-      </nav>
+    </nav>
     <header class="bg-dark text-white">
         <div class="container">
             <h1 class="mb-0">Formation HTML5 - CSS3 - RWD</h1>
         </div>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a href="./" class="navbar-brand badge rounded-pill text-bg-warning">
                 <img class="img-fluid" src="./images/no-logo.svg" width="200" />
@@ -67,13 +108,15 @@
                         <a class="nav-link" href="./article.html" title="Lien vers l'article'">Article</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./contact.html" title="Lien vers le formaulaire de contact'">Contact</a>
+                        <a class="nav-link" href="./contact.html"
+                            title="Lien vers le formaulaire de contact'">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./media.html" title="Lien vers la page des media'">Media</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./animation.html" title="Lien vers les animations en CSS'">Animation CSS</a>
+                        <a class="nav-link" href="./animation.html" title="Lien vers les animations en CSS'">Animation
+                            CSS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./trucs.html" title="Lien vers des trucs en CSS'">Trucs CSS</a>
@@ -82,7 +125,8 @@
                         <a class="nav-link" href="./grid.html" title="Lien vers le CSS des grilles">Grilles CSS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="./bootstrap.html" title="Lien vers la page bootstrap'">Bootstrap</a>
+                        <a class="nav-link active" href="./bootstrap.html"
+                            title="Lien vers la page bootstrap'">Bootstrap</a>
                     </li>
                 </ul>
             </div>
@@ -93,68 +137,114 @@
         <section class="row mt-2">
             <div id="carouselExampleCaptions" class="carousel slide custom-carousel" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="3000">
-                    <img src="./images/alice-cards-design.jpg" class="d-block w-100 img-fluid" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>First slide label</h5>
-                      <p>Some representative placeholder content for the first slide.</p>
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="./images/alice-cards-design.jpg" class="d-block w-100 img-fluid" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
                     </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="3000">
-                    <img src="./images/gundam-take-off-01.gif" class="d-block w-100 img-fluid" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="./images/gundam-take-off-01.gif" class="d-block w-100 img-fluid" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
                     </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="3000">
-                    <img src="./images/james-white-composite.jpg" class="d-block w-100 img-fluid" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Third slide label</h5>
-                      <p>Some representative placeholder content for the third slide.</p>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="./images/james-white-composite.jpg" class="d-block w-100 img-fluid" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
                 </button>
-              </div>
+            </div>
         </section>
         <section class="row justify-content-md-center">
-            <aside class="col-12 col-md-4">
-                <h4>Et aussi</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex odit perspiciatis voluptatibus pariatur
-                    error deleniti labore non illum, explicabo quo eos rerum laborum ducimus nostrum. Perferendis
-                    asperiores quia assumenda ullam?
-                </p>
-                <ul>
-                    <li>truc </li>
-                    <li>truc </li>
-                    <li>truc </li>
-                    <li>truc </li>
-                </ul>
-                <div class="row">
-                    <div class="col-12 col-lg-6">
-                        <h5>Ha ha</h5>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            <div class="col-12 col-md-4">
+                <aside class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Et aussi</h4>
+                        <ul class="nav nav-tabs card-header-tabs" id="info">
+                            <li class="nav-item">
+                              <a class="nav-link active" data-info="pratique" aria-current="true" href="#">Pratique</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-info="document" href="#">Documents</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-info="autre">Autre</a>
+                            </li>
+                          </ul>
                     </div>
-                    <div class="col-12 col-lg-6">
-                        <h5>Ho ho</h5>
-                        Laudantium consequuntur nesciunt aut adipisci.
+                    <div class="card-body">
+                        <div id="pratique" class="info-p actuelle">
+                            <h4>Infos Pratiques</h4>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, architecto unde tempore recusandae cupiditate facilis nisi odit, aut eligendi, ut dignissimos optio est ipsa doloremque veniam at laudantium pariatur iure!
+                            </p>
+                        </div>
+                        <div id="document" class="info-p">
+                            <h4>Documentation</h4>
+                            <ul>
+                                <li>liste X</li>
+                                <li>liste X</li>
+                                <li>liste X</li>
+                                <li>liste X</li>
+                                <li>liste X</li>
+                            </ul>
+                        </div>
+                        <div id="autre" class="info-p">
+                            <p class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, dolore eum? Id quam totam esse eius veritatis dolorem obcaecati, delectus repellat optio molestiae, ratione sint eum, error exercitationem impedit. Assumenda!
+                            </p>
+                            <ul>
+                                <li>liste Y</li>
+                                <li>liste Y</li>
+                                <li>liste Y</li>
+                                <li>liste Y</li>
+                                <li>liste Y</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </aside>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                    </ul>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <h5>Ha ha</h5>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <h5>Ho ho</h5>
+                                Laudantium consequuntur nesciunt aut adipisci.
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
             <article class="col-12 col-md-4">
                 <header>
                     <h2>Titre de l'article 1</h2>
@@ -236,6 +326,46 @@
                     <h2>Titre de l'article 3</h2>
                 </header>
                 <main>
+                    <h3>Modal Bs</h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione beatae, facilis itaque
+                        eligendi dolor, animi saepe repellat quos exercitationem, dolore ea! Id iste magnam soluta eum
+                        placeat dolores odio. Cupiditate!
+                    </p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Launch demo modal
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="text-center">
+                    <a href="./article.html" title="Lien vers l'article'">
+                        <button class="btn btn-warning btn-no-logo">
+                            <i class="bi bi-plus"></i> Lire la suite <i class="bi bi-plus"></i>
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article class="col-12 col-md-4">
+                <header>
+                    <h2>Titre de l'article 3</h2>
+                </header>
+                <main>
                     <h3>Intro</h3>
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione beatae, facilis itaque
@@ -270,7 +400,8 @@
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link pb-0 pt-0" href="./contact.html" title="Lien vers le formaulaire de contact'">
+                            <a class="nav-link pb-0 pt-0" href="./contact.html"
+                                title="Lien vers le formaulaire de contact'">
                                 <i class="bi bi-arrow-right-circle-fill"></i> Contact
                             </a>
                         </li>
@@ -280,7 +411,8 @@
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link pb-0 pt-0" href="./animation.html" title="Lien vers les animations en CSS'">
+                            <a class="nav-link pb-0 pt-0" href="./animation.html"
+                                title="Lien vers les animations en CSS'">
                                 <i class="bi bi-arrow-right-circle-fill"></i> Animation CSS
                             </a>
                         </li>
@@ -311,7 +443,8 @@
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link pb-0 pt-0" href="./contact.html" title="Lien vers le formaulaire de contact'">
+                            <a class="nav-link pb-0 pt-0" href="./contact.html"
+                                title="Lien vers le formaulaire de contact'">
                                 <i class="bi bi-arrow-right-circle-fill"></i> Contact
                             </a>
                         </li>
@@ -336,27 +469,32 @@
                     <h4>En complément</h4>
                     <ul class="navbar-nav">
                         <li>
-                            <a class="nav-link pb-0 pt-0" href="https://www.creativebloq.com" title="creative bloq, site de veille web et design">
+                            <a class="nav-link pb-0 pt-0" href="https://www.creativebloq.com"
+                                title="creative bloq, site de veille web et design">
                                 <i class="bi bi-arrow-right-circle-fill"></i> Creative Bloq
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link pb-0 pt-0" href="https://icons.getbootstrap.com/" title="icones web par bootstrap">
+                            <a class="nav-link pb-0 pt-0" href="https://icons.getbootstrap.com/"
+                                title="icones web par bootstrap">
                                 <i class="bi bi-arrow-right-circle-fill"></i> Bootstrap Icons
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link pb-0 pt-0" href="https://www.dafont.com/fr/" title="site de polices de caractère">
+                            <a class="nav-link pb-0 pt-0" href="https://www.dafont.com/fr/"
+                                title="site de polices de caractère">
                                 <i class="bi bi-arrow-right-circle-fill"></i> Dafont.com
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link pb-0 pt-0" href="https://everythingfonts.com/font-face" title="Outils de création de font-face CSS">
+                            <a class="nav-link pb-0 pt-0" href="https://everythingfonts.com/font-face"
+                                title="Outils de création de font-face CSS">
                                 <i class="bi bi-arrow-right-circle-fill"></i> Font-face generator
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link pb-0 pt-0" href="https://www.w3.org/TR/wai-aria-1.1/" title="Les normes aria W3C">
+                            <a class="nav-link pb-0 pt-0" href="https://www.w3.org/TR/wai-aria-1.1/"
+                                title="Les normes aria W3C">
                                 <i class="bi bi-arrow-right-circle-fill"></i> W3C Aria
                             </a>
                         </li>
