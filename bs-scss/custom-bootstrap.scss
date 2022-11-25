@@ -1,0 +1,127 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "./functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+//@import "./variables";
+
+// 4. Include any default map overrides here
+@import "./custom-variables";
+
+// 5. Include remainder of required parts
+@import "./maps";
+@import "./mixins";
+@import "./root";
+:root{
+    --bs-custom-carousel-base-height: 200px;
+  --bs-custom-carousel-height: calc(100vw * 0.3);
+  --bs-custom-carousel-bg-color: rgba(0, 0, 0, 0.65);
+  --bs-carousel-zoom-rate: 1.1;
+}
+
+// 6. Optionally include any other parts as needed
+@import "./utilities";
+@import "./reboot";
+@import "./type";
+@import "./images";
+@import "./containers";
+@import "./grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "accordion";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "alert";
+@import "progress";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "offcanvas";
+@import "placeholders";
+@import "./helpers";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "./utilities/api";
+
+// 8. Add additional custom code here
+.navbar-toggler-icon.icon-custom {
+    background-image: url("../images/template/bank-white.svg");
+  }
+  
+  .btn {
+    font-family: "BAUHS93";
+    text-transform: uppercase;
+  }
+  
+  .btn-no-logo {
+    border-color: var(--bs-btn-color);
+    border-width: 2px;
+    border-radius: 50px;
+  }
+  
+  body > footer > div > nav > div > ul > li > a > i,
+  body > footer > div > nav > div > ul > li > a.nav-link,
+  body > footer > div > nav > div > h4,
+  h1:not(.modal-dialog h1),
+  .navbar-brand {
+    color: var(--bs-warning);
+  }
+  .custom-carousel .carousel-inner {
+    height: var(--bs-custom-carousel-base-height-height);
+  }
+  
+  .custom-carousel .img-fluid {
+    width: unset !important;
+    height: var(--bs-custom-carousel-height) !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .custom-carousel .carousel-caption,
+  .custom-carousel .carousel-inner {
+    background-color: var(--bs-custom-carousel-bg-color);
+  }
+
+  .info-p {
+    display: none;
+  }
+  
+  .actuelle {
+    display: block;
+  }
+
+  article,
+aside {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+article footer {
+  margin-top: 10px;
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @media screen and (min-width: #{$value}) {
+        .custom-carousel .img-fluid,
+  .custom-carousel .carousel-inner {
+    height: var(--bs-custom-carousel-height) !important;
+  }
+    }
+}
