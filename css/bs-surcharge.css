@@ -1,99 +1,113 @@
-@import url('./BAUHS93.css');
+@import url("./BAUHS93.css");
 
-:root{
-    --bs-custom-carousel-base-height: 200px;
-    --bs-custom-carousel-height: calc(100vw * 0.30);
-    --bs-custom-carousel-bg-color: rgba(0, 0, 0, 0.65);
-    --bs-carousel-zoom-rate: 1.1;
+:root {
+  --bs-custom-carousel-base-height: 200px;
+  --bs-custom-carousel-height: calc(100vw * 0.3);
+  --bs-custom-carousel-bg-color: rgba(0, 0, 0, 0.65);
+  --bs-carousel-zoom-rate: 1.1;
 }
 
-.navbar-toggler-icon.icon-custom{
-    background-image: url('../images/template/bank-white.svg');
+.navbar-toggler-icon.icon-custom {
+  background-image: url("../images/template/bank-white.svg");
 }
 
-.btn{
-    font-family: 'BAUHS93';
-    text-transform: uppercase;
+.btn {
+  font-family: "BAUHS93";
+  text-transform: uppercase;
 }
 
-.btn-no-logo{
-    border-color: var(--bs-btn-color);
-    border-width: 2px;
-    border-radius: 50px;
+.btn-no-logo {
+  border-color: var(--bs-btn-color);
+  border-width: 2px;
+  border-radius: 50px;
 }
 
-body > footer > div > nav > div > ul > li > a > i, 
-body > footer > div > nav > div > ul > li > a.nav-link, 
-body > footer > div > nav > div > h4, 
-h1:not(.modal-dialog h1), 
-.navbar-brand{
-    color: var(--bs-warning);
+body > footer > div > nav > div > ul > li > a > i,
+body > footer > div > nav > div > ul > li > a.nav-link,
+body > footer > div > nav > div > h4,
+h1:not(.modal-dialog h1),
+.navbar-brand {
+  color: var(--bs-warning);
 }
-.custom-carousel .carousel-inner{
-    height: var(--bs-custom-carousel-base-height-height);
-}
-
-.custom-carousel .img-fluid{
-    width: unset!important;
-    height: var(--bs-custom-carousel-height)!important;
-    margin-left: auto;
-    margin-right: auto;
+.custom-carousel .carousel-inner {
+  height: var(--bs-custom-carousel-base-height-height);
 }
 
-.custom-carousel .carousel-caption, .custom-carousel .carousel-inner{
-    background-color: var(--bs-custom-carousel-bg-color);
+.custom-carousel .img-fluid {
+  width: unset !important;
+  height: var(--bs-custom-carousel-height) !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.info-p{
-    display: none;
+.custom-carousel .carousel-caption,
+.custom-carousel .carousel-inner {
+  background-color: var(--bs-custom-carousel-bg-color);
 }
 
-.actuelle{
-    display: block;
+.info-p {
+  display: none;
 }
 
-article, aside{
-    margin-top: 10px!important;
-    margin-bottom: 10px!important;
+.actuelle {
+  display: block;
 }
 
-article footer{
-    margin-top: 10px;
+.ratio-9x16 {
+  --bs-aspect-ratio: calc(16 / 9 * 100%);
+}
+
+.ratio-A4-portrait {
+  --bs-aspect-ratio: calc(29.7 / 21 * 100%);
+}
+
+.ratio-A4-paysage {
+  --bs-aspect-ratio: calc(21 / 29.7 * 100%);
+}
+
+article,
+aside {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+article footer {
+  margin-top: 10px;
 }
 
 @media screen and (min-width: 576px) {
-    .custom-carousel .img-fluid,
-    .custom-carousel .carousel-inner{
-        height: var(--bs-custom-carousel-height)!important;
-    }
+  .custom-carousel .img-fluid,
+  .custom-carousel .carousel-inner {
+    height: var(--bs-custom-carousel-height) !important;
   }
-  @media screen and (min-width: 768px) {
-    .custom-carousel .img-fluid,
-    .custom-carousel .carousel-inner{
-        height: var(--bs-custom-carousel-height)!important;
-    }
+}
+@media screen and (min-width: 768px) {
+  .custom-carousel .img-fluid,
+  .custom-carousel .carousel-inner {
+    height: var(--bs-custom-carousel-height) !important;
   }
-  @media screen and (min-width: 992px) {
-    .custom-carousel .img-fluid,
-    .custom-carousel .carousel-inner{
-        height: var(--bs-custom-carousel-height)!important;
-    }
+}
+@media screen and (min-width: 992px) {
+  .custom-carousel .img-fluid,
+  .custom-carousel .carousel-inner {
+    height: var(--bs-custom-carousel-height) !important;
   }
-  @media screen and (min-width: 1200px) {
-    .custom-carousel .img-fluid,
-    .custom-carousel .carousel-inner{
-        height: var(--bs-custom-carousel-height)!important;
-    }
+}
+@media screen and (min-width: 1200px) {
+  .custom-carousel .img-fluid,
+  .custom-carousel .carousel-inner {
+    height: var(--bs-custom-carousel-height) !important;
   }
-  @media screen and (min-width: 1400px) {
-    .custom-carousel .img-fluid,
-    .custom-carousel .carousel-inner{
-        height: var(--bs-custom-carousel-height)!important;
-    }
+}
+@media screen and (min-width: 1400px) {
+  .custom-carousel .img-fluid,
+  .custom-carousel .carousel-inner {
+    height: var(--bs-custom-carousel-height) !important;
   }
-  @media screen and (min-width: 1600px) {
-    .custom-carousel .img-fluid,
-    .custom-carousel .carousel-inner{
-        height: var(--bs-custom-carousel-height)!important;
-    }
+}
+@media screen and (min-width: 1600px) {
+  .custom-carousel .img-fluid,
+  .custom-carousel .carousel-inner {
+    height: var(--bs-custom-carousel-height) !important;
   }
+}

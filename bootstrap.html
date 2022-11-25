@@ -12,24 +12,24 @@
     <script src="./js/bootstrap.bundle.js"></script>
     <script>
         /* attene du chargement de la page */
-        window.addEventListener('DOMContentLoaded', function(){
+        window.addEventListener('DOMContentLoaded', function () {
             /* récupération de l'élément de la page (du DOM) qui a l'id info, ici, la liste en tabulation avec des lien dedans */
             let cardHeader = document.querySelector('#info');
             /* récupération de la liste des éléments a afficher selon la tabulation cliquée, ici, ils posssèdent la classe info-p */
             let infoContent = document.querySelectorAll('.info-p');
             /* on surveille le clique sur la liste */
-            cardHeader.addEventListener('click', function(event){
+            cardHeader.addEventListener('click', function (event) {
                 /* on récupère l'évènement clic sur la liste */
                 /* on annule l'effet du clic sur un lien */
                 event.preventDefault();
                 /* on récupère le dataset du lien qui correspond à la div d'info a afficher */
                 let infoAff = event.target.dataset.info;
                 /* on parcours tous les noeuds enfants de la liste de tab */
-                cardHeader.childNodes.forEach(function(value){
+                cardHeader.childNodes.forEach(function (value) {
                     /* on parcours les noeuds présent dans chaque li */
-                    value.childNodes.forEach(function(element){
+                    value.childNodes.forEach(function (element) {
                         /* si un des noeud possède une liste de classe */
-                        if(element.classList !== undefined){
+                        if (element.classList !== undefined) {
                             /* on retire la classe active si elle existe */
                             element.classList.remove('active');
                         }
@@ -38,7 +38,7 @@
                     });
                 });
                 /* on parcours la liste des éléments a afficher */
-                infoContent.forEach(function(value){
+                infoContent.forEach(function (value) {
                     /* on retire la classe actuelle de tous les éléments */
                     value.classList.remove('actuelle');
                 });
@@ -47,6 +47,9 @@
             });
         });
     </script>
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -186,21 +189,24 @@
                         <h4 class="card-title">Et aussi</h4>
                         <ul class="nav nav-tabs card-header-tabs" id="info">
                             <li class="nav-item">
-                              <a class="nav-link active" data-info="pratique" aria-current="true" href="#">Pratique</a>
+                                <a class="nav-link active" data-info="pratique" aria-current="true"
+                                    href="#">Pratique</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" data-info="document" href="#">Documents</a>
+                                <a class="nav-link" data-info="document" href="#">Documents</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" data-info="autre">Autre</a>
+                                <a class="nav-link" data-info="autre">Autre</a>
                             </li>
-                          </ul>
+                        </ul>
                     </div>
                     <div class="card-body">
                         <div id="pratique" class="info-p actuelle">
                             <h4>Infos Pratiques</h4>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, architecto unde tempore recusandae cupiditate facilis nisi odit, aut eligendi, ut dignissimos optio est ipsa doloremque veniam at laudantium pariatur iure!
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, architecto unde tempore
+                                recusandae cupiditate facilis nisi odit, aut eligendi, ut dignissimos optio est ipsa
+                                doloremque veniam at laudantium pariatur iure!
                             </p>
                         </div>
                         <div id="document" class="info-p">
@@ -215,7 +221,9 @@
                         </div>
                         <div id="autre" class="info-p">
                             <p class="card-text">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, dolore eum? Id quam totam esse eius veritatis dolorem obcaecati, delectus repellat optio molestiae, ratione sint eum, error exercitationem impedit. Assumenda!
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, dolore eum? Id quam
+                                totam esse eius veritatis dolorem obcaecati, delectus repellat optio molestiae, ratione
+                                sint eum, error exercitationem impedit. Assumenda!
                             </p>
                             <ul>
                                 <li>liste Y</li>
@@ -323,7 +331,7 @@
             </article>
             <article class="col-12 col-md-4">
                 <header>
-                    <h2>Titre de l'article 3</h2>
+                    <h2>Titre de l'article 4</h2>
                 </header>
                 <main>
                     <h3>Modal Bs</h3>
@@ -335,18 +343,21 @@
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Launch demo modal
                     </button>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     ...
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
                                     <button type="button" class="btn btn-primary">Save changes</button>
                                 </div>
                             </div>
@@ -363,10 +374,125 @@
             </article>
             <article class="col-12 col-md-4">
                 <header>
-                    <h2>Titre de l'article 3</h2>
+                    <h2>Titre de l'article 5</h2>
                 </header>
                 <main>
                     <h3>Intro</h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione beatae, facilis itaque
+                        eligendi dolor, animi saepe repellat quos exercitationem, dolore ea! Id iste magnam soluta eum
+                        placeat dolores odio. Cupiditate!
+                    </p>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/PF2LmpoFPwk" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </main>
+                <footer class="text-center">
+                    <a href="./article.html" title="Lien vers l'article'">
+                        <button class="btn btn-warning btn-no-logo">
+                            <i class="bi bi-plus"></i> Lire la suite <i class="bi bi-plus"></i>
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article class="col-12 col-lg-6">
+                <header>
+                    <h2>Titre de l'article 6</h2>
+                </header>
+                <main>
+                    <h3>Intro</h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione beatae, facilis itaque
+                        eligendi dolor, animi saepe repellat quos exercitationem, dolore ea! Id iste magnam soluta eum
+                        placeat dolores odio. Cupiditate!
+                    </p>
+                    <div class="ratio ratio-A4-portrait">
+                        <iframe src="./documents/CRAM.pdf" width="100%" height="100%"></iframe>
+                    </div>
+                </main>
+                <footer class="text-center">
+                    <a href="./article.html" title="Lien vers l'article'">
+                        <button class="btn btn-warning btn-no-logo">
+                            <i class="bi bi-plus"></i> Lire la suite <i class="bi bi-plus"></i>
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article class="col-12 col-lg-6">
+                <header>
+                    <h2>Titre de l'article 7</h2>
+                </header>
+                <main>
+                    <h3>Intro</h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione beatae, facilis itaque
+                        eligendi dolor, animi saepe repellat quos exercitationem, dolore ea! Id iste magnam soluta eum
+                        placeat dolores odio. Cupiditate!
+                    </p>
+                    <div class="ratio ratio-A4-paysage">
+                        <iframe src="./ressources/PP3.pdf" width="100%" height="100%"></iframe>
+                    </div>
+                </main>
+                <footer class="text-center">
+                    <a href="./article.html" title="Lien vers l'article'">
+                        <button class="btn btn-warning btn-no-logo">
+                            <i class="bi bi-plus"></i> Lire la suite <i class="bi bi-plus"></i>
+                        </button>
+                    </a>
+                </footer>
+            </article>
+        </section>
+        <section class="row">
+            <div class="col-12 col-md-4">
+                <div class="card">
+                    <img src="./images/city-black-n-white.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card with stretched link</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <article class="col-12 col-md-4 position-relative">
+                <header>
+                    <h2>Titre de l'article 2</h2>
+                </header>
+                <main>
+                    <h3>Intro</h3>
+                    <p class="text-truncate">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit accusamus consequatur
+                        distinctio, omnis voluptas iure alias in aperiam inventore. Nostrum architecto voluptas impedit
+                        tenetur. Sapiente tempore totam quod explicabo natus.
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione beatae, facilis itaque
+                        eligendi dolor, animi saepe repellat quos exercitationem, dolore ea! Id iste magnam soluta eum
+                        placeat dolores odio. Cupiditate!
+                    </p>
+                </main>
+                <footer class="text-center">
+                    <a href="./article.html" title="Lien vers l'article'">
+                        <button class="btn btn-warning btn-no-logo stretched-link">
+                            <i class="bi bi-plus"></i> Lire la suite <i class="bi bi-plus"></i>
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article class="col-12 col-md-8">
+                <header>
+                    <h2>Titre de l'article 2</h2>
+                </header>
+                <main class="grid">
+                    <h3>Intro</h3>
+                    <p class="text-truncate">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit accusamus consequatur
+                        distinctio, omnis voluptas iure alias in aperiam inventore. Nostrum architecto voluptas impedit
+                        tenetur. Sapiente tempore totam quod explicabo natus.
+                    </p>
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione beatae, facilis itaque
                         eligendi dolor, animi saepe repellat quos exercitationem, dolore ea! Id iste magnam soluta eum
